@@ -1,0 +1,86 @@
+.sidebar {
+  position: relative;
+  flex: 0 1 25%;
+  @include flex($direction: column, $align: stretch, $justify: flex-start);
+  padding: 0 15px;
+  background-color: $color-light;
+}
+
+.sidebar__btn {
+  @include flex;
+  margin: 0 0 30px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: $color-blue-light;
+  transition: all 0.3s ease;
+}
+
+.sidebar__btn:hover {
+  background: $color-blue-light-hover;
+}
+
+.sidebar__btn-title {
+  @include font($size: 20px, $weight: 600);
+  text-transform: uppercase;
+}
+
+.sidebar__btn-img {
+  width: 40px;
+  height: 40px;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.sidebar__content {
+  @include flex($direction: column, $align: stretch, $justify: center);
+  gap: 15px;
+}
+
+.sidebar__title {
+  @include font($size: 20px);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.sidebar__list {
+  border: 15px solid $color-white;
+  border-radius: 15px;
+  @include font($size: 18px);
+}
+
+.list-month {
+}
+
+.list-month__item {
+}
+
+.list-year {
+}
+
+.list-year__item {
+}
+
+.sidebar__modes {
+  @include flex($direction: column, $align: stretch, $justify: stretch);
+}
+
+.sidebar__modes-btn {
+  padding: 25px;
+  @include font($size: 20px);
+  border-radius: 15px;
+  text-transform: uppercase;
+  background-color: $color-light;
+  transition: all 0.3s ease;
+}
+
+.sidebar__modes-btn:hover {
+  background-color: $color-blue-light-hover;
+}
+
+.mode-active {
+  border: 2px solid $color-green;
+  background-color: $color-blue-light;
+}

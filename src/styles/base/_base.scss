@@ -1,0 +1,17 @@
+html {
+}
+
+.wrapper {
+  position: relative;
+  @include flex($direction: column, $align: stretch);
+  min-height: 100%;
+}
+
+.content {
+  flex: 1 1 auto;
+  @include flex($align: stretch);
+}
+
+.inactive-class {
+  display: none;
+}

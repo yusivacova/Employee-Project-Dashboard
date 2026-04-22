@@ -41,7 +41,7 @@ module.exports = ({ development }) => ({
     new HtmlWebPackPlugin({
       template: './src/index.html',
       filename: './index.html',
-      chunks: ['home'],
+      chunks: ['index'],
       minify: false,
     }),
     new MiniCssExtractPlugin({

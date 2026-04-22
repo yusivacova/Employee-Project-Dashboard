@@ -12,115 +12,117 @@
     <body>
         <!-- linthtml-disable id-class-style -->
         <div class="wrapper">
-            <header>
-                <h1 class="header-title">Employee &amp; Project Dashboard</h1>
+            <header class="header">
+                <h1 class="header__title">Employee &amp; Project Dashboard</h1>
             </header>
             <main class="content">
-                <div class="content__body">
-                    <section class="sidebar">
-                        <button type="button" class="sidebar__open">Open sidebar</button>
-                        <div class="sidebar__content">
-                            <button type="button" class="sidebar__close">Close sidebar</button>
-                            <h2 class="sidebar__title">Period</h2>
-                            <ul class="sidebar__list list-month">
-                                <li class="list-month__item">January</li>
-                                <li class="list-month__item">February</li>
-                                <li class="list-month__item">March</li>
-                                <li class="list-month__item">April</li>
-                                <li class="list-month__item">May</li>
-                                <li class="list-month__item">June</li>
-                                <li class="list-month__item">July</li>
-                                <li class="list-month__item">August</li>
-                                <li class="list-month__item">September</li>
-                                <li class="list-month__item">October</li>
-                                <li class="list-month__item">November</li>
-                                <li class="list-month__item">December</li>
-                            </ul>
-                            <ul class="sidebar__list list-year">
-                                <li class="list-year__item">2025</li>
-                                <li class="list-year__item">2026</li>
-                                <li class="list-year__item">2027</li>
-                            </ul>
-                            <div class="sidebar__modes">
-                                <button type="button" class="sidebar__projects">Projects</button>
-                                <button type="button" class="sidebar__employees">Employees</button>
+                <section class="sidebar">
+                    <div class="sidebar__btn">
+                        <p class="sidebar__btn-title">Menu</p>
+                        <div class="sidebar__btn-img">
+                            <img src="./assets/open-arrow.png" alt="Arrow status open or close menu">
+                        </div>
+                    </div>
+                    <div class="sidebar__content">
+                        <h2 class="sidebar__title">Period</h2>
+                        <select class="sidebar__list list-month">
+                            <option value="0" class="list-month__item">January</option>
+                            <option value="1" class="list-month__item">February</option>
+                            <option value="2" class="list-month__item">March</option>
+                            <option value="3" class="list-month__item">April</option>
+                            <option value="4" class="list-month__item">May</option>
+                            <option value="5" class="list-month__item">June</option>
+                            <option value="6" class="list-month__item">July</option>
+                            <option value="7" class="list-month__item">August</option>
+                            <option value="8" class="list-month__item">September</option>
+                            <option value="9" class="list-month__item">October</option>
+                            <option value="10" class="list-month__item">November</option>
+                            <option value="11" class="list-month__item">December</option>
+                        </select>
+                        <select class="sidebar__list list-year">
+                            <option value="2025" class="list-year__item">2025</option>
+                            <option value="2026" class="list-year__item">2026</option>
+                            <option value="2027" class="list-year__item">2027</option>
+                        </select>
+                        <div class="sidebar__modes">
+                            <button type="button" class="sidebar__modes-btn mode-active">Projects</button>
+                            <button type="button" class="sidebar__modes-btn">Employees</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="main-content">
+                    <div class="main-content__body">
+                        <div class="main-content__header">
+                            <h2 class="main-content__title"> </h2>
+                            <div class="main-content__btns"></div>
+                        </div>
+                        <div class="main-content__table"></div>
+                        <div class="main-content__forms">
+                            <div class="main-content__form form-projects">
+                                <h3 class="form-projects__title form-title">+ Add new Project</h3>
+                                <form action="#" method="post" class="form-projects__main">
+                                    <div class="form-projects__item">
+                                        <label for="form-projects__name">Project Name:</label>
+                                        <input type="text" id="form-projects__name">
+                                    </div>
+                                    <div class="form-projects__item">
+                                        <label for="form-projects__company">Company Name:</label>
+                                        <input type="text" id="form-projects__company">
+                                    </div>
+                                    <div class="form-projects__item">
+                                        <label for="form-projects__budget">Budget:</label>
+                                        <input type="number" id="form-projects__budget">
+                                    </div>
+                                    <div class="form-projects__item">
+                                        <label for="form-projects__employee">Employee Capacity:</label>
+                                        <input type="number" id="form-projects__employee">
+                                    </div>
+                                    <div class="form-projects__btns">
+                                        <button type="submit" class="form-projects__btn-add form-btn-add">Add</button>
+                                        <button type="button" class="form-projects__btn-cancel form-btn-cancel">Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="main-content__form form-employees">
+                                <h3 class="form-employees__title form-title">Add new Employee</h3>
+                                <form action="#" method="post" class="form-employees__main">
+                                    <div class="form-employees__item">
+                                        <label for="form-employees__name">Name</label>
+                                        <input type="text" id="form-employees__name">
+                                    </div>
+                                    <div class="form-employees__item">
+                                        <label for="form-employees__surname">Surname</label>
+                                        <input type="text" id="form-employees__surname">
+                                    </div>
+                                    <div class="form-employees__item">
+                                        <label for="form-employees__birth">Date of birth</label>
+                                        <input type="date" id="form-employees__birth">
+                                    </div>
+                                    <div class="form-employees__item">
+                                        Position
+                                        <select name="position-employees" id="form-employees__position">
+                                            <option disabled>Select position</option>
+                                            <option value="Junior">Junior</option>
+                                            <option value="Middle">Middle</option>
+                                            <option value="Senior">Senior</option>
+                                            <option value="Lead">Lead</option>
+                                            <option value="Architect">Architect</option>
+                                            <option value="BO">BO</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-employees__salary">
+                                        <label for="form-employees__salary">Salary</label>
+                                        <input type="number" id="form-employees__salary">
+                                    </div>
+                                    <div class="form-employees__btns">
+                                        <button type="submit" class="form-employees__btn-add form-btn-add">Add</button>
+                                        <button type="button" class="form-employees__btn-cancel form-btn-cancel">Cancel</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
-                    </section>
-                    <section class="main-content">
-                        <div class="main-content__body">
-                            <div class="main-content__header">
-                                <h2 class="main-content__title"> </h2>
-                                <div class="main-content__btns"></div>
-                            </div>
-                            <div class="main-content__table"></div>
-                            <div class="main-content__forms">
-                                <div class="main-content__form form-projects">
-                                    <h3 class="form-projects__title form-title">+ Add new Project</h3>
-                                    <form action="#" method="post" class="form-projects__main">
-                                        <div class="form-projects__item">
-                                            <label for="form-projects__name">Project Name:</label>
-                                            <input type="text" id="form-projects__name">
-                                        </div>
-                                        <div class="form-projects__item">
-                                            <label for="form-projects__company">Company Name:</label>
-                                            <input type="text" id="form-projects__company">
-                                        </div>
-                                        <div class="form-projects__item">
-                                            <label for="form-projects__budget">Budget:</label>
-                                            <input type="number" id="form-projects__budget">
-                                        </div>
-                                        <div class="form-projects__item">
-                                            <label for="form-projects__employee">Employee Capacity:</label>
-                                            <input type="number" id="form-projects__employee">
-                                        </div>
-                                        <div class="form-projects__btns">
-                                            <button type="submit" class="form-projects__btn-add form-btn-add">Add</button>
-                                            <button type="button" class="form-projects__btn-cancel form-btn-cancel">Cancel</button>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="main-content__form form-employees">
-                                    <h3 class="form-employees__title form-title">Add new Employee</h3>
-                                    <form action="#" method="post" class="form-employees__main">
-                                        <div class="form-employees__item">
-                                            <label for="form-employees__name">Name</label>
-                                            <input type="text" id="form-employees__name">
-                                        </div>
-                                        <div class="form-employees__item">
-                                            <label for="form-employees__surname">Surname</label>
-                                            <input type="text" id="form-employees__surname">
-                                        </div>
-                                        <div class="form-employees__item">
-                                            <label for="form-employees__birth">Date of birth</label>
-                                            <input type="date" id="form-employees__birth">
-                                        </div>
-                                        <div class="form-employees__item">
-                                            Position
-                                            <select name="position-employees" id="form-employees__position">
-                                                <option disabled>Select position</option>
-                                                <option value="Junior">Junior</option>
-                                                <option value="Middle">Middle</option>
-                                                <option value="Senior">Senior</option>
-                                                <option value="Lead">Lead</option>
-                                                <option value="Architect">Architect</option>
-                                                <option value="BO">BO</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-employees__salary">
-                                            <label for="form-employees__salary">Salary</label>
-                                            <input type="number" id="form-employees__salary">
-                                        </div>
-                                        <div class="form-employees__btns">
-                                            <button type="submit" class="form-employees__btn-add form-btn-add">Add</button>
-                                            <button type="button" class="form-employees__btn-cancel form-btn-cancel">Cancel</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
+                    </div>
+                </section>
             </main>
         </div>
     </body>
