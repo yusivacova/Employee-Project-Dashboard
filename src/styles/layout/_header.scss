@@ -1,12 +1,12 @@
 .header {
   @include flex($justify: center);
-  padding: 25px 0;
+  padding: 25px 15px;
   background-color: $color-light;
 }
 
 .header__sidebar-btn {
+  width: 270px;
   @include flex;
-  flex: 0 1 25%;
   padding: 10px 20px;
   border-radius: 25px;
   border: 1px solid $color-blue-light;

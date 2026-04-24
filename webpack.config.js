@@ -52,7 +52,12 @@ module.exports = ({ development }) => ({
         from: 'src/public/',
         to: "./public/",
         noErrorOnMissing: true,
-      }],
+      },
+      {
+        from: 'src/assets/images/',
+          to: "./assets/images/",
+          noErrorOnMissing: true,
+        }],
     }),
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
     new StylelintPlugin({

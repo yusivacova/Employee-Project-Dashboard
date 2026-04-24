@@ -1,6 +1,6 @@
 .sidebar {
   position: relative;
-  flex: 0 1 25%;
+  width: 300px;
   @include flex($direction: column, $align: stretch, $justify: flex-start);
   padding: 0 15px;
   background-color: $color-light;
