@@ -3,13 +3,18 @@
 @import "abstracts/mixins";
 @import "abstracts/_varaibles";
 
-//base
-@import "base/nullstyle";
-@import "base/base";
-
 //layout
 @import "layout/header";
 
 //components
 @import "components/sidebar";
 @import "components/main-content";
+@import "components/table";
+@import "components/forms";
+@import "components/seed-data";
+
+//base
+@import "base/nullstyle";
+@import "base/base";
+
+

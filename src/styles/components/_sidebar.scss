@@ -6,34 +6,6 @@
   background-color: $color-light;
 }
 
-.sidebar__btn {
-  @include flex;
-  margin: 0 0 30px;
-  padding: 10px 20px;
-  border-radius: 25px;
-  background-color: $color-blue-light;
-  transition: all 0.3s ease;
-}
-
-.sidebar__btn:hover {
-  background: $color-blue-light-hover;
-}
-
-.sidebar__btn-title {
-  @include font($size: 20px, $weight: 600);
-  text-transform: uppercase;
-}
-
-.sidebar__btn-img {
-  width: 40px;
-  height: 40px;
-
-  img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-}
-
 .sidebar__content {
   @include flex($direction: column, $align: stretch, $justify: center);
   gap: 15px;
@@ -49,18 +21,6 @@
   border: 15px solid $color-white;
   border-radius: 15px;
   @include font($size: 18px);
-}
-
-.list-month {
-}
-
-.list-month__item {
-}
-
-.list-year {
-}
-
-.list-year__item {
 }
 
 .sidebar__modes {

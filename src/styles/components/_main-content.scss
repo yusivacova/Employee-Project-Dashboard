@@ -1,78 +1,37 @@
 .main-content {
   flex: 1 1 auto;
-}
-
-.main-content__body {
+  padding: 25px;
 }
 
 .main-content__header {
+  @include flex;
+  margin: 0 0 30px;
 }
 
 .main-content__title {
+  @include font($size: 30px);
 }
 
-.main-content__btns {
+.main-content__btn-add {
+  padding: 15px;
+  @include font($size: 18px);
+  border-radius: 15px;
+  background-color: $color-green;
+  transition: all 0.3s ease;
 }
 
-.main-content__table {
+.main-content__btn-add:hover {
+  background-color: $color-btn-hover;
 }
 
-.main-content__forms {
+.main-content__btn-data {
+  padding: 15px;
+  @include font($size: 18px);
+  border-radius: 15px;
+  background-color: $color-green;
+  transition: all 0.3s ease;
 }
 
-.main-content__form {
-}
-
-.form-projects {
-}
-
-.form-projects__title {
-}
-
-.form-title {
-}
-
-.form-projects__main {
-}
-
-.form-projects__item {
-}
-
-.form-projects__btns {
-}
-
-.form-projects__btn-add {
-}
-
-.form-btn-add {
-}
-
-.form-projects__btn-cancel {
-}
-
-.form-btn-cancel {
-}
-
-.form-employees {
-}
-
-.form-employees__title {
-}
-
-.form-employees__main {
-}
-
-.form-employees__item {
-}
-
-.form-employees__salary {
-}
-
-.form-employees__btns {
-}
-
-.form-employees__btn-add {
-}
-
-.form-employees__btn-cancel {
+.main-content__btn-data:hover {
+  background-color: $color-btn-hover;
 }

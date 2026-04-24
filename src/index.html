@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,21 +7,20 @@
         <link rel="icon" href="#" type="image/png">
         <title>Employee &amp; Project Dashboard</title>
     </head>
-
     <body>
         <!-- linthtml-disable id-class-style -->
         <div class="wrapper">
             <header class="header">
+                <div class="header__sidebar-btn">
+                    <p class="header__sidebar-btn-title">Menu</p>
+                    <div class="header__sidebar-btn-img">
+                        <img src="./assets/close-arrow.png" alt="Arrow status open or close menu">
+                    </div>
+                </div>
                 <h1 class="header__title">Employee &amp; Project Dashboard</h1>
             </header>
             <main class="content">
                 <section class="sidebar">
-                    <div class="sidebar__btn">
-                        <p class="sidebar__btn-title">Menu</p>
-                        <div class="sidebar__btn-img">
-                            <img src="./assets/open-arrow.png" alt="Arrow status open or close menu">
-                        </div>
-                    </div>
                     <div class="sidebar__content">
                         <h2 class="sidebar__title">Period</h2>
                         <select class="sidebar__list list-month">
@@ -52,73 +50,189 @@
                 </section>
                 <section class="main-content">
                     <div class="main-content__body">
-                        <div class="main-content__header">
-                            <h2 class="main-content__title"> </h2>
-                            <div class="main-content__btns"></div>
-                        </div>
-                        <div class="main-content__table"></div>
-                        <div class="main-content__forms">
-                            <div class="main-content__form form-projects">
-                                <h3 class="form-projects__title form-title">+ Add new Project</h3>
-                                <form action="#" method="post" class="form-projects__main">
-                                    <div class="form-projects__item">
-                                        <label for="form-projects__name">Project Name:</label>
-                                        <input type="text" id="form-projects__name">
-                                    </div>
-                                    <div class="form-projects__item">
-                                        <label for="form-projects__company">Company Name:</label>
-                                        <input type="text" id="form-projects__company">
-                                    </div>
-                                    <div class="form-projects__item">
-                                        <label for="form-projects__budget">Budget:</label>
-                                        <input type="number" id="form-projects__budget">
-                                    </div>
-                                    <div class="form-projects__item">
-                                        <label for="form-projects__employee">Employee Capacity:</label>
-                                        <input type="number" id="form-projects__employee">
-                                    </div>
-                                    <div class="form-projects__btns">
-                                        <button type="submit" class="form-projects__btn-add form-btn-add">Add</button>
-                                        <button type="button" class="form-projects__btn-cancel form-btn-cancel">Cancel</button>
-                                    </div>
-                                </form>
+                        <div class="main-content__projects">
+                            <div class="main-content__header">
+                                <h2 class="main-content__title">Projects</h2>
+                                <div class="main-content__btns">
+                                    <button type="button" class="main-content__btn-add btn-add-project">Add project</button>
+                                    <button type="button" class="main-content__btn-data btn-data-project">Seed data</button>
+                                </div>
                             </div>
-                            <div class="main-content__form form-employees">
-                                <h3 class="form-employees__title form-title">Add new Employee</h3>
-                                <form action="#" method="post" class="form-employees__main">
-                                    <div class="form-employees__item">
-                                        <label for="form-employees__name">Name</label>
-                                        <input type="text" id="form-employees__name">
-                                    </div>
-                                    <div class="form-employees__item">
-                                        <label for="form-employees__surname">Surname</label>
-                                        <input type="text" id="form-employees__surname">
-                                    </div>
-                                    <div class="form-employees__item">
-                                        <label for="form-employees__birth">Date of birth</label>
-                                        <input type="date" id="form-employees__birth">
-                                    </div>
-                                    <div class="form-employees__item">
-                                        Position
-                                        <select name="position-employees" id="form-employees__position">
-                                            <option disabled>Select position</option>
-                                            <option value="Junior">Junior</option>
-                                            <option value="Middle">Middle</option>
-                                            <option value="Senior">Senior</option>
-                                            <option value="Lead">Lead</option>
-                                            <option value="Architect">Architect</option>
-                                            <option value="BO">BO</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-employees__salary">
-                                        <label for="form-employees__salary">Salary</label>
-                                        <input type="number" id="form-employees__salary">
-                                    </div>
-                                    <div class="form-employees__btns">
-                                        <button type="submit" class="form-employees__btn-add form-btn-add">Add</button>
-                                        <button type="button" class="form-employees__btn-cancel form-btn-cancel">Cancel</button>
-                                    </div>
-                                </form>
+                            <table class="main-content__table table table-projects">
+                                <thead class="table__header">
+                                    <tr class="table__header-row">
+                                        <th class="table__title">Company name
+                                            <span class="table__title-sort">&hArr;</span>
+                                            <span class="table__title-filter">&#128269;</span>
+                                        </th>
+                                        <th class="table__title">Project name
+                                            <span class="table__title-sort">&hArr;</span>
+                                            <span class="table__title-filter">&#128269;</span>
+                                        </th>
+                                        <th class="table__title">Budget
+                                            <span class="table__title-sort">&hArr;</span>
+                                        </th>
+                                        <th class="table__title">Employee Capacity
+                                            <span class="table__title-sort">&hArr;</span>
+                                        </th>
+                                        <th class="table__title">Employees</th>
+                                        <th class="table__title">Estimated Income
+                                            <span class="table__title-sort">&hArr;</span>
+                                        </th>
+                                        <th class="table__title">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table__item">
+                                        <td class="table__value"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="main-content__total">
+                                Total Estimated Income:
+                                <span class="main-content__value">$0.00</span>
+                            </div>
+                        </div>
+                        <div class="main-content__employees inactive-class">
+                            <div class="main-content__header">
+                                <h2 class="main-content__title">Employees</h2>
+                                <div class="main-content__btns">
+                                    <button type="button" class="main-content__btn-add btn-add-employee">Add Employee</button>
+                                </div>
+                            </div>
+                            <table class="main-content__table table table-employee">
+                                <thead class="table__header">
+                                    <tr class="table__header-row">
+                                        <th class="table__title">Name
+                                            <span class="table__title-sort">&hArr;</span>
+                                            <span class="table__title-filter">&#128269;</span>
+                                        </th>
+                                        <th class="table__title">Surname
+                                            <span class="table__title-sort">&hArr;</span>
+                                            <span class="table__title-filter">&#128269;</span>
+                                        </th>
+                                        <th class="table__title">Age
+                                            <span class="table__title-sort">&hArr;</span>
+                                        </th>
+                                        <th class="table__title">Position
+                                            <span class="table__title-filter">&#128269;</span>
+                                        </th>
+                                        <th class="table__title">Salary
+                                            <span class="table__title-sort">&hArr;</span>
+                                        </th>
+                                        <th class="table__title">Estimated Income
+                                            <span class="table__title-sort">&hArr;</span>
+                                        </th>
+                                        <th class="table__title">Project
+                                            <span class="table__title-filter">&#128269;</span>
+                                        </th>
+                                        <th class="table__title">Project Income
+                                            <span class="table__title-sort">&hArr;</span>
+                                        </th>
+                                        <th class="table__title">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table__item">
+                                        <td class="table__value"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="main-content__forms">
+                            <div class="main-content__form form-projects inactive-class">
+                                <div class="main-content__form-body form">
+                                    <h3 class="form__title form-title">Add new Project</h3>
+                                    <form action="#" method="post" class="form__main">
+                                        <div class="form__item">
+                                            <label for="form-projects__name">Project Name:</label>
+                                            <input type="text" id="form-projects__name">
+                                        </div>
+                                        <div class="form__item">
+                                            <label for="form-projects__company">Company Name:</label>
+                                            <input type="text" id="form-projects__company">
+                                        </div>
+                                        <div class="form__item">
+                                            <label for="form-projects__budget">Budget:</label>
+                                            <input type="number" id="form-projects__budget">
+                                        </div>
+                                        <div class="form__item">
+                                            <label for="form-projects__employee">Employee Capacity:</label>
+                                            <input type="number" id="form-projects__employee">
+                                        </div>
+                                        <div class="form__btns">
+                                            <button type="submit" class="form-projects__btn-add form-btn-add">Add</button>
+                                            <button type="button" class="form-projects__btn-cancel form-btn-cancel">Cancel</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="main-content__form form-employees inactive-class">
+                                <div class="main-content__form-body form">
+                                    <h3 class="form__title form-title">Add new Employee</h3>
+                                    <form action="#" method="post" class="form__main">
+                                        <div class="form__item">
+                                            <label for="form__name">Name</label>
+                                            <input type="text" id="form__name">
+                                        </div>
+                                        <div class="form__item">
+                                            <label for="form__surname">Surname</label>
+                                            <input type="text" id="form__surname">
+                                        </div>
+                                        <div class="form__item">
+                                            <label for="form__birth">Date of birth</label>
+                                            <input type="date" id="form__birth">
+                                        </div>
+                                        <div class="form__item">
+                                            Position
+                                            <select name="position-employees" id="form-employees__position">
+                                                <option disabled>Select position</option>
+                                                <option value="Junior">Junior</option>
+                                                <option value="Middle">Middle</option>
+                                                <option value="Senior">Senior</option>
+                                                <option value="Lead">Lead</option>
+                                                <option value="Architect">Architect</option>
+                                                <option value="BO">BO</option>
+                                            </select>
+                                        </div>
+                                        <div class="form__item">
+                                            <label for="form-employees__salary">Salary</label>
+                                            <input type="number" id="form-employees__salary">
+                                        </div>
+                                        <div class="form__btns">
+                                            <button type="submit" class="form-employees__btn-add form-btn-add">Add</button>
+                                            <button type="button" class="form-employees__btn-cancel form-btn-cancel">Cancel</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-content__seed-data seed-data inactive-class">
+                            <div class="seed-data__body">
+                                <div class="seed-data__cross">
+                                    <span class="seed-data__cross-item"></span>
+                                    <span class="seed-data__cross-item"></span>
+                                </div>
+                                <div class="seed-data__title">Seed Data from Month</div>
+                                <p class="seed-data__text"> Select a month to copy its data to the current month (<span class="seed-data__current-month">April 2026</span>):</p>
+                                <table class="seed-data__table table">
+                                    <thead class="table__header">
+                                        <tr class="table__header-row">
+                                            <th class="table__title">Year</th>
+                                            <th class="table__title">Month
+                                            </th>
+                                            <th class="table__title">Projects</th>
+                                            <th class="table__title">Employees</th>
+                                            <th class="table__title">Total Est. Income</th>
+                                            <th class="table__title">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="table__item">
+                                            <td class="table__value"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -126,5 +240,4 @@
             </main>
         </div>
     </body>
-
 </html>

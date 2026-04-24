@@ -1,0 +1,17 @@
+.table {
+  width: 100%;
+  margin: 0 0 30px;
+}
+
+.table__header-row {
+  background-color: $color-blue-light;
+}
+
+.table__title {
+  padding: 15px 5px;
+  @include font($size: 18px);
+}
+
+.main-content__total {
+  @include font($size: 18px);
+}
