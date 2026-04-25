@@ -13,9 +13,12 @@ const openCloseMenu = () => {
 
   btnMenu.addEventListener('click', () => {
     const menu = document.querySelector('.sidebar');
-    menu.classList.toggle('inactive-class');
+    menu.classList.toggle('close-menu');
+    setTimeout(() => {
+      menu.classList.toggle('inactive-class');
+    }, 200);
 
-    if (menu.classList.contains('inactive-class')) {
+    if (menu.classList.contains('close-menu')) {
       changeImgMenu('open');
     } else {
       changeImgMenu('close');

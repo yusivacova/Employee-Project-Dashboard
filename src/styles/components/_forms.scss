@@ -1,18 +1,22 @@
 .main-content__form {
-  position: fixed;
+  position: absolute;
+  right: -560px;
   top: 0;
-  left: 0;
-  width: 100%;
+  box-shadow:
+    0 10px 20px $color-modal,
+    0 6px 6px $color-modal;
   height: 100%;
-  @include flex($justify: center);
-  background-color: $color-modal;
+  transition: all 0.3s ease;
 }
 
 .form {
-  position: relative;
   @include flex($direction: column, $align: stretch, $justify: center);
   padding: 25px;
   background-color: $color-white;
+}
+
+.form-open {
+  right: 0;
 }
 
 .form-title {

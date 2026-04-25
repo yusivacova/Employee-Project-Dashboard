@@ -8,7 +8,7 @@ const openFormAddProject = () => {
   const formAddProject = document.querySelector('.form-projects');
 
   btnAddProject.addEventListener('click', () => {
-    formAddProject.classList.remove('inactive-class');
+    formAddProject.classList.add('form-open');
   });
 };
 
@@ -17,8 +17,8 @@ const closeFormAddProject = () => {
 
   formProjects.addEventListener('click', (e) => {
     const clickTag = e.target;
-    if (clickTag.className === 'main-content__form form-projects' || clickTag.className.includes('form-btn-cancel')) {
-      formProjects.classList.add('inactive-class');
+    if (clickTag.className.includes('form-btn-cancel')) {
+      formProjects.classList.remove('form-open');
     }
   });
 };

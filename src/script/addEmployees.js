@@ -8,7 +8,7 @@ const openFormAddEmployees = () => {
   const formAddEmployees = document.querySelector('.form-employees');
 
   btnAddEmployee.addEventListener('click', () => {
-    formAddEmployees.classList.remove('inactive-class');
+    formAddEmployees.classList.add('form-open');
   });
 };
 
@@ -17,8 +17,8 @@ const closeFormAddEmployees = () => {
 
   formAddEmployees.addEventListener('click', (e) => {
     const clickTag = e.target;
-    if (clickTag.className === 'main-content__form form-employees' || clickTag.className.includes('form-btn-cancel')) {
-      formAddEmployees.classList.add('inactive-class');
+    if (clickTag.className.includes('form-btn-cancel')) {
+      formAddEmployees.classList.remove('form-open');
     }
   });
 };
