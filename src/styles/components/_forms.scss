@@ -25,9 +25,10 @@
 }
 
 .form__item {
+  position: relative;
   @include flex;
   width: 500px;
-  margin: 0 0 25px;
+  margin: 0 0 30px;
   @include font($size: 20px);
 
   input,
@@ -66,4 +67,11 @@
 
 .form-btn-cancel:hover {
   background-color: $color-red-hover;
+}
+
+.form-notification {
+  position: absolute;
+  left: 0;
+  bottom: -23px;
+  color: $color-red;
 }

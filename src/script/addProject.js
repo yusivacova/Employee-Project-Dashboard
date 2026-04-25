@@ -1,6 +1,10 @@
+import { addRequirementForForm } from './requirementForms';
+
 export function addProject() {
   openFormAddProject();
   closeFormAddProject();
+  addRequirementForFormProjectName();
+  addRequirementForFormProjectCompany();
 }
 
 const openFormAddProject = () => {
@@ -21,4 +25,14 @@ const closeFormAddProject = () => {
       formProjects.classList.remove('form-open');
     }
   });
+};
+
+const addRequirementForFormProjectName = () => {
+  const inputFormProjectsName = document.getElementById('form-projects__name');
+  addRequirementForForm(inputFormProjectsName, 3);
+};
+
+const addRequirementForFormProjectCompany = () => {
+  const inputFormProjectsCompany = document.getElementById('form-projects__company');
+  addRequirementForForm(inputFormProjectsCompany, 2);
 };

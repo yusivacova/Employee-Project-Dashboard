@@ -12,3 +12,8 @@
 .inactive-class {
   display: none;
 }
+
+.incorrect-input {
+  border: 1px solid $color-red !important;
+}
+
