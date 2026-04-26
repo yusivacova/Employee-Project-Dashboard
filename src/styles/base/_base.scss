@@ -6,7 +6,7 @@
 
 .content {
   flex: 1 1 auto;
-  @include flex($align: stretch)
+  @include flex($align: stretch);
 }
 
 .inactive-class {
@@ -17,3 +17,16 @@
   border: 1px solid $color-red !important;
 }
 
+.correct-input {
+  border: 1px solid $color-green !important;
+}
+
+button:disabled {
+  background-color: transparent;
+  border: 1px solid $color-black;
+}
+
+button:disabled:hover {
+   background-color: transparent;
+  border: 1px solid $color-black;
+}

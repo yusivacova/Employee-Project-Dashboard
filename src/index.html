@@ -154,14 +154,14 @@
                                         </div>
                                         <div class="form__item">
                                             <label for="form-projects__budget">Budget:</label>
-                                            <input type="number" id="form-projects__budget">
+                                            <input type="number" step="0.01" min="0" id="form-projects__budget">
                                         </div>
                                         <div class="form__item">
                                             <label for="form-projects__employee">Employee Capacity:</label>
-                                            <input type="number" id="form-projects__employee">
+                                            <input type="number" min="1" required id="form-projects__employee">
                                         </div>
                                         <div class="form__btns">
-                                            <button type="submit" class="form-projects__btn-add form-btn-add">Add</button>
+                                            <button type="submit" class="form-projects__btn-add form-btn-add" disabled>Add</button>
                                             <button type="button" class="form-projects__btn-cancel form-btn-cancel">Cancel</button>
                                         </div>
                                     </form>
@@ -200,7 +200,7 @@
                                             <input type="number" id="form-employees__salary">
                                         </div>
                                         <div class="form__btns">
-                                            <button type="submit" class="form-employees__btn-add form-btn-add">Add</button>
+                                            <button type="submit" class="form-employees__btn-add form-btn-add" disabled>Add</button>
                                             <button type="button" class="form-employees__btn-cancel form-btn-cancel">Cancel</button>
                                         </div>
                                     </form>
