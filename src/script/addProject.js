@@ -1,6 +1,4 @@
-import { addRequirementForForm } from './requirementForms';
-import { addRequirementForFormBudget } from './requirementForms';
-import { addRequirementForFormEmployeeCapacity } from './requirementForms';
+import { addRequirementForForm, addRequirementForFormBudget, addRequirementForFormEmployeeCapacity } from './requirementForms';
 
 export function addProject() {
   openFormAddProject();
@@ -54,14 +52,14 @@ const addRequirementForFormProjectEmployeeCapacity = () => {
 
 const removeFormInputAndNotification = () => {
   const inputForms = document.querySelectorAll('.form-projects .form__item input');
-  inputForms.forEach(input => {
+  inputForms.forEach((input) => {
     input.value = '';
     if (input.classList.contains('incorrect-input')) input.classList.remove('incorrect-input');
     if (input.classList.contains('correct-input')) input.classList.remove('correct-input');
   });
 
   const notificationsTags = document.querySelectorAll('.form-projects .form-notification');
-  notificationsTags.forEach(notification => {
+  notificationsTags.forEach((notification) => {
     notification.remove();
   });
 };

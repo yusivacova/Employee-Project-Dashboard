@@ -7,12 +7,9 @@ const setModeApp = () => {
 
   sidebarModes.addEventListener('click', (e) => {
     const clickTag = e.target;
-    console.log(clickTag);
-
     removeModeActiveClass();
     addModeActiveClass(clickTag);
     changeMainContent(clickTag);
-    console.log(clickTag);
   });
 };
 
