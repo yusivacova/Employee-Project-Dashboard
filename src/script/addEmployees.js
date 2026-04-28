@@ -1,6 +1,8 @@
 import {
   addRequirementForFormEmployeeName, addRequirementForFormEmployeeBirth, addRequirementForFormEmployeeSalary, addRequirementForFormEmployeePosition,
 } from './requirementForms';
+import { MONTHLY_DATA } from './dataApp';
+import { createTableEmployees } from './tableEmployees';
 
 export function addEmployees() {
   openFormAddEmployees();
@@ -10,6 +12,7 @@ export function addEmployees() {
   addRequirementForFormEmployeesBirth();
   addRequirementForFormEmployeesSalary();
   addRequirementForFormEmployeesPosition();
+  sendDataFromInServerEmployee();
 }
 
 const openFormAddEmployees = () => {
@@ -70,4 +73,41 @@ const addRequirementForFormEmployeesPosition = () => {
 const addRequirementForFormEmployeesSalary = () => {
   const inputFormEmployeeSalary = document.getElementById('form-employees__salary');
   addRequirementForFormEmployeeSalary(inputFormEmployeeSalary);
+};
+
+const sendDataFromInServerEmployee = () => {
+  const formEmployees = document.querySelector('.form-employees');
+
+  formEmployees.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const allItemsForm = document.querySelectorAll('.form-employees .form__item');
+
+    const newEmployee = {};
+    allItemsForm.forEach((item) => {
+      newEmployee[item.firstElementChild.textContent.slice(0, -1)] = item.lastElementChild.value;
+    });
+
+    updateMonthlyDataObjectEmployee(newEmployee, formEmployees);
+
+    createTableEmployees(newEmployee);
+  });
+};
+
+const updateMonthlyDataObjectEmployee = (newEmployee, form) => {
+  const periodMonth = document.querySelector('.list-month').value;
+  const periodYear = document.querySelector('.list-year').value;
+  const keyObjData = `${periodYear}-${periodMonth}`;
+
+  if (MONTHLY_DATA[keyObjData]) {
+    MONTHLY_DATA[keyObjData].employees.push(newEmployee);
+  }
+
+  if (!MONTHLY_DATA[keyObjData]) {
+    MONTHLY_DATA[keyObjData] = { employees: [], projects: [] };
+    MONTHLY_DATA[keyObjData].employees.push(newEmployee);
+  }
+
+  form.classList.remove('form-open');
+  removeFormInputAndNotification();
 };

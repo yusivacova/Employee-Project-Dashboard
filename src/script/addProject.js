@@ -1,4 +1,6 @@
 import { addRequirementForForm, addRequirementForFormBudget, addRequirementForFormEmployeeCapacity } from './requirementForms';
+import { MONTHLY_DATA } from './dataApp';
+import { createTableProjects } from './tableProject';
 
 export function addProject() {
   openFormAddProject();
@@ -7,6 +9,7 @@ export function addProject() {
   addRequirementForFormProjectCompany();
   addRequirementForFormProjectBudget();
   addRequirementForFormProjectEmployeeCapacity();
+  sendDataFromInServerProject();
 }
 
 const openFormAddProject = () => {
@@ -62,4 +65,41 @@ const removeFormInputAndNotification = () => {
   notificationsTags.forEach((notification) => {
     notification.remove();
   });
+};
+
+const sendDataFromInServerProject = () => {
+  const formProjects = document.querySelector('.form-projects');
+
+  formProjects.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const allItemsForm = document.querySelectorAll('.form-projects .form__item');
+
+    const newProject = {};
+    allItemsForm.forEach((item) => {
+      newProject[item.firstElementChild.textContent.slice(0, -1)] = item.lastElementChild.value;
+    });
+
+    updateMonthlyDataObjectProject(newProject, formProjects);
+
+    createTableProjects(newProject);
+  });
+};
+
+const updateMonthlyDataObjectProject = (newProject, form) => {
+  const periodMonth = document.querySelector('.list-month').value;
+  const periodYear = document.querySelector('.list-year').value;
+  const keyObjData = `${periodYear}-${periodMonth}`;
+
+  if (MONTHLY_DATA[keyObjData]) {
+    MONTHLY_DATA[keyObjData].projects.push(newProject);
+  }
+
+  if (!MONTHLY_DATA[keyObjData]) {
+    MONTHLY_DATA[keyObjData] = { employees: [], projects: [] };
+    MONTHLY_DATA[keyObjData].projects.push(newProject);
+  }
+
+  form.classList.remove('form-open');
+  removeFormInputAndNotification();
 };

@@ -7,6 +7,7 @@ import { setMode } from './script/mode';
 import { addProject } from './script/addProject';
 import { setSeedData } from './script/seedData';
 import { addEmployees } from './script/addEmployees';
+import { setLocalStorage, getLocalStorageForUpdateTabels } from './script/localStorage';
 
 window.onload = function () {
   setMenu();
@@ -15,3 +16,6 @@ window.onload = function () {
   setSeedData();
   addEmployees();
 };
+
+window.addEventListener('load', getLocalStorageForUpdateTabels);
+window.addEventListener('beforeunload', setLocalStorage);
