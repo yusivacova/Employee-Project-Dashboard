@@ -18,14 +18,17 @@
 
 .table__value {
   padding: 15px 5px;
-}
-
-.table__value {
   @include font($size: 18px);
   text-align: center;
 }
 
-.table__btn-delete {
+.table-btns {
+  @include flex($direction: column, $align: center, $justify: center);
+  gap: 5px;
+}
+
+.table__btn-delete,
+.table__btn-assign {
   width: 70px;
   padding: 5px;
   border-radius: 5px;
@@ -33,10 +36,24 @@
   @include font($size: 18px);
 }
 
-.table__btn-show-employees{
+.table__btn-show-employees,
+.table__btn-show-assignments,
+.table__btn-availability {
   width: 118px;
   padding: 5px;
   border-radius: 5px;
-  background-color: $color-blue-light;
   @include font($size: 18px);
+}
+
+.table__btn-show-employees,
+.table__btn-show-assignments {
+  background-color: $color-blue-light;
+}
+
+.table__btn-availability {
+  background-color: #9035ffa3;
+}
+
+.table__btn-assign {
+  background-color: $color-blue-light;
 }

@@ -12,25 +12,33 @@ export function getLocalStorageForUpdateTabels() {
     const MONTHLY_DATA_localJson = localStorage.getItem('local-MONTHLY_DATA');
     const MONTHLY_DATA_local = JSON.parse(MONTHLY_DATA_localJson);
 
-    for (let key in MONTHLY_DATA_local){
+    for (let key in MONTHLY_DATA_local) {
       MONTHLY_DATA[key] = MONTHLY_DATA_local[key];
     }
 
-    console.log('MONTHLY_DATA_local', MONTHLY_DATA_local);
-    updateTablesAfterRebootPage();
+    updateTablesProjectsAndEmployees();
   }
 }
 
-const updateTablesAfterRebootPage = () => {
+export const updateTablesProjectsAndEmployees = () => {
   const periodMonth = document.querySelector('.list-month').value;
   const periodYear = document.querySelector('.list-year').value;
   const keyObjData = `${periodYear}-${periodMonth}`;
 
-  MONTHLY_DATA[keyObjData].projects.forEach(project => {
-    createTableProjects(project);
-  });
+  if (MONTHLY_DATA[keyObjData]) {
+    MONTHLY_DATA[keyObjData].projects.forEach(project => {
+      createTableProjects(project);
+    });
 
-  MONTHLY_DATA[keyObjData].employees.forEach(employee => {
-    createTableEmployees(employee);
-  });
+    MONTHLY_DATA[keyObjData].employees.forEach(employee => {
+      createTableEmployees(employee);
+    });
+  }
+};
+
+export const removeTablesProjectsAndEmployees = () => {
+  const bodyTableProjects = document.querySelector('.table-projects .table__body');
+  bodyTableProjects.innerHTML = '';
+  const bodyTableEmployees = document.querySelector('.table-employee .table__body');
+  bodyTableEmployees.innerHTML = '';
 };
