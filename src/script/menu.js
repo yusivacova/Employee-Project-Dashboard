@@ -1,5 +1,3 @@
-
-
 const changeImgMenu = (status) => {
   const imgSrc = {
     close: 'assets/images/close-arrow.png',

@@ -1,7 +1,7 @@
 import {
   addRequirementForFormEmployeeName, addRequirementForFormEmployeeBirth, addRequirementForFormEmployeeSalary, addRequirementForFormEmployeePosition,
 } from './requirementForms';
-import { MONTHLY_DATA } from './dataApp';
+import { MONTHLY_DATA, defineDateKey } from './dataApp';
 import { createTableEmployees } from './tableEmployees';
 
 export function addEmployees() {
@@ -95,9 +95,7 @@ const sendDataFromInServerEmployee = () => {
 };
 
 const updateMonthlyDataObjectEmployee = (newEmployee, form) => {
-  const periodMonth = document.querySelector('.list-month').value;
-  const periodYear = document.querySelector('.list-year').value;
-  const keyObjData = `${periodYear}-${periodMonth}`;
+  const keyObjData = defineDateKey();
 
   if (MONTHLY_DATA[keyObjData]) {
     MONTHLY_DATA[keyObjData].employees.push(newEmployee);

@@ -1,4 +1,5 @@
 import { updateTotalEstimatedIncome } from './tableProject';
+import { deleteEmployee } from './deleteEmployee';
 
 export function createTableEmployees(newEmployee, index) {
   const bodyTable = document.querySelector('.table-employee .table__body');
@@ -13,12 +14,12 @@ const createTrEmployee = (employee) => {
   const newTr = document.createElement('tr');
   newTr.className = 'table__item';
 
-  createTDtable(newTr, employee['Name']);
-  createTDtable(newTr, employee['Surname']);
+  createTDtable(newTr, employee.Name);
+  createTDtable(newTr, employee.Surname);
   createAgeEmployee(newTr, employee['Date of birth']);
-  createTDtable(newTr, employee['Position']);
-  createTDtable(newTr, `$${employee['Salary']}`);
-  createEstimatedPayment(newTr, employee['Salary']);
+  createTDtable(newTr, employee.Position);
+  createTDtable(newTr, `$${employee.Salary}`);
+  createEstimatedPayment(newTr, employee.Salary);
   createButtonShowAssignments(employee, newTr);
   createProjectedIncome(employee, newTr);
   createButtonsActions(newTr);
@@ -59,8 +60,8 @@ const createEstimatedPayment = (container, salary) => {
 };
 
 const createButtonShowAssignments = (employee, container) => {
-  //нужно добавить в общий объект проекты которые назначены этому работнику
-  //и потом появится кнопка
+  // нужно добавить в общий объект проекты которые назначены этому работнику
+  // и потом появится кнопка
   if (employee.Projects) {
     const newTd = createTDtable(container);
     const btnShowAssignments = document.createElement('button');
@@ -103,6 +104,11 @@ const createButtonsActions = (container) => {
   btnDelete.className = 'table__btn-delete';
   btnDelete.textContent = 'Delete';
   newTd.append(btnDelete);
+
+  btnDelete.addEventListener('click', (e) => {
+    const clickTag = e.target;
+    deleteEmployee(clickTag);
+  });
 
   return [btnAvailability, btnAssign, btnDelete];
 };

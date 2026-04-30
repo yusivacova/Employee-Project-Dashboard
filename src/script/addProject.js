@@ -1,5 +1,5 @@
 import { addRequirementForForm, addRequirementForFormBudget, addRequirementForFormEmployeeCapacity } from './requirementForms';
-import { MONTHLY_DATA } from './dataApp';
+import { MONTHLY_DATA, defineDateKey } from './dataApp';
 import { createTableProjects } from './tableProject';
 
 export function addProject() {
@@ -87,9 +87,7 @@ const sendDataFromInServerProject = () => {
 };
 
 const updateMonthlyDataObjectProject = (newProject, form) => {
-  const periodMonth = document.querySelector('.list-month').value;
-  const periodYear = document.querySelector('.list-year').value;
-  const keyObjData = `${periodYear}-${periodMonth}`;
+  const keyObjData = defineDateKey();
 
   if (MONTHLY_DATA[keyObjData]) {
     MONTHLY_DATA[keyObjData].projects.push(newProject);
@@ -99,8 +97,6 @@ const updateMonthlyDataObjectProject = (newProject, form) => {
     MONTHLY_DATA[keyObjData] = { employees: [], projects: [], total: '$0.00' };
     MONTHLY_DATA[keyObjData].projects.push(newProject);
   }
-
-  console.log('MONTHLY_DATA[keyObjData]', MONTHLY_DATA[keyObjData])
 
   const index = MONTHLY_DATA[keyObjData].projects.length - 1;
 

@@ -1,4 +1,5 @@
-import { MONTHLY_DATA } from './dataApp';
+import { MONTHLY_DATA, defineDateKey } from './dataApp';
+import { deletePtoject } from './deleteProject';
 
 export function createTableProjects(newProject, index) {
   const bodyTable = document.querySelector('.table-projects .table__body');
@@ -38,16 +39,21 @@ const createButtonDelete = (container) => {
   btnDelete.textContent = 'Delete';
   newTd.append(btnDelete);
 
+  btnDelete.addEventListener('click', (e) => {
+    const clickTag = e.target;
+    deletePtoject(clickTag);
+  });
+
   return btnDelete;
 };
 
 const createEstimatedIncome = (project, container) => {
-  //нужно снчала посчитать и записать в проект в общий объект значние
+  // нужно снчала посчитать и записать в проект в общий объект значние
   // и потом его включить
   const newTd = document.createElement('td');
 
   if (project['Estimated Income']) {
-    //Project income = total revenue - total cost
+    // Project income = total revenue - total cost
     newTd.className = 'table__value estimated-income profit';
     newTd.textContent = 'total revenue - total cost';
   } else {
@@ -58,8 +64,8 @@ const createEstimatedIncome = (project, container) => {
 };
 
 const createButtonShowEmployees = (project, container) => {
-  //если мы назначили работника - то нужно сделать кнопку показать раблотников
-  //а так не делать кнопку
+  // если мы назначили работника - то нужно сделать кнопку показать раблотников
+  // а так не делать кнопку
 
   if (project.Employees) {
     const newTd = createTDtable(container);
@@ -75,9 +81,7 @@ const createButtonShowEmployees = (project, container) => {
 export const updateTotalEstimatedIncome = () => {
   const valueTotal = document.querySelector('.main-content__value');
   const allEstimatedIncome = document.querySelectorAll('.estimated-income');
-  const periodMonth = document.querySelector('.list-month').value;
-  const periodYear = document.querySelector('.list-year').value;
-  const keyObjData = `${periodYear}-${periodMonth}`;
+  const keyObjData = defineDateKey();
   let sumEstimatedIncome = 0;
   let sumPartSalaryEmployees = 0;
 

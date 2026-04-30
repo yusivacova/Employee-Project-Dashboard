@@ -3,7 +3,7 @@ import { MONTHLY_DATA } from './dataApp';
 export function createTableSeedData() {
   const bodyTable = document.querySelector('.seed-data .table__body');
 
-  for (let key in MONTHLY_DATA) {
+  for (const key in MONTHLY_DATA) {
     const trSeedData = createTrSeedData(MONTHLY_DATA[key], key);
     trSeedData.dataset.index = key;
     bodyTable.append(trSeedData);

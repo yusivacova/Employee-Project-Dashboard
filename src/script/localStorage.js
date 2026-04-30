@@ -1,7 +1,6 @@
-import { MONTHLY_DATA } from './dataApp';
-import { createTableProjects } from './tableProject';
+import { MONTHLY_DATA, defineDateKey } from './dataApp';
+import { createTableProjects, returnInitialTotalEstimatedIncome } from './tableProject';
 import { createTableEmployees } from './tableEmployees';
-import { returnInitialTotalEstimatedIncome } from './tableProject';
 
 export function setLocalStorage() {
   localStorage.setItem('isUpdatePage', 'true');
@@ -13,7 +12,7 @@ export function getLocalStorageForUpdateTabels() {
     const MONTHLY_DATA_localJson = localStorage.getItem('local-MONTHLY_DATA');
     const MONTHLY_DATA_local = JSON.parse(MONTHLY_DATA_localJson);
 
-    for (let key in MONTHLY_DATA_local) {
+    for (const key in MONTHLY_DATA_local) {
       MONTHLY_DATA[key] = MONTHLY_DATA_local[key];
     }
 
@@ -22,9 +21,7 @@ export function getLocalStorageForUpdateTabels() {
 }
 
 export const updateTablesProjectsAndEmployees = () => {
-  const periodMonth = document.querySelector('.list-month').value;
-  const periodYear = document.querySelector('.list-year').value;
-  const keyObjData = `${periodYear}-${periodMonth}`;
+  const keyObjData = defineDateKey();
 
   if (MONTHLY_DATA[keyObjData]) {
     MONTHLY_DATA[keyObjData].projects.forEach((project, index) => {
