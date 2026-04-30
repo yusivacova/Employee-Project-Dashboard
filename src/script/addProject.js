@@ -80,9 +80,9 @@ const sendDataFromInServerProject = () => {
       newProject[item.firstElementChild.textContent.slice(0, -1)] = item.lastElementChild.value;
     });
 
-    updateMonthlyDataObjectProject(newProject, formProjects);
+    const indexNewProject = updateMonthlyDataObjectProject(newProject, formProjects);
 
-    createTableProjects(newProject);
+    createTableProjects(newProject, indexNewProject);
   });
 };
 
@@ -96,10 +96,16 @@ const updateMonthlyDataObjectProject = (newProject, form) => {
   }
 
   if (!MONTHLY_DATA[keyObjData]) {
-    MONTHLY_DATA[keyObjData] = { employees: [], projects: [] };
+    MONTHLY_DATA[keyObjData] = { employees: [], projects: [], total: '$0.00' };
     MONTHLY_DATA[keyObjData].projects.push(newProject);
   }
 
+  console.log('MONTHLY_DATA[keyObjData]', MONTHLY_DATA[keyObjData])
+
+  const index = MONTHLY_DATA[keyObjData].projects.length - 1;
+
   form.classList.remove('form-open');
   removeFormInputAndNotification();
+
+  return index;
 };

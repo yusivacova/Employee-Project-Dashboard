@@ -1,4 +1,4 @@
-import { updateTablesProjectsAndEmployees, removeTablesProjectsAndEmployees } from './localStorage';
+
 
 const changeImgMenu = (status) => {
   const imgSrc = {
@@ -31,36 +31,15 @@ const openCloseMenu = () => {
 const setCurrentMonthAndYear = () => {
   const today = new Date().toISOString().slice(0, 10);
   const arrToday = today.split('-');
-  console.log(arrToday)
 
   const periodMonth = document.querySelector('.list-month');
-  periodMonth.value = arrToday[1];
-  console.log('periodMonth', periodMonth)
+  const currentMonth = arrToday[1] - 1;
+  periodMonth.value = (currentMonth.length === 2) ? currentMonth : `0${currentMonth}`;
   const periodYear = document.querySelector('.list-year');
   periodYear.value = arrToday[0];
-};
-
-const monitorValueСhangeMonthrApp = () => {
-  const periodMonth = document.querySelector('.list-month');
-
-  periodMonth.addEventListener('change', () => {
-    removeTablesProjectsAndEmployees();
-    updateTablesProjectsAndEmployees();
-  });
-};
-
-const monitorValueСhangeYearApp = () => {
-  const periodYear = document.querySelector('.list-year');
-
-  periodYear.addEventListener('change', () => {
-    removeTablesProjectsAndEmployees();
-    updateTablesProjectsAndEmployees();
-  });
 };
 
 export function setMenu() {
   openCloseMenu();
   setCurrentMonthAndYear();
-  monitorValueСhangeMonthrApp();
-  monitorValueСhangeYearApp()
 }

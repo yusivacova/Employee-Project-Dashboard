@@ -1,3 +1,5 @@
+import { createTableSeedData } from './tableSeedData';
+
 export function setSeedData() {
   openSeedData();
   closeSeedData();
@@ -8,7 +10,9 @@ const openSeedData = () => {
   const seedData = document.querySelector('.seed-data');
 
   btnAddProject.addEventListener('click', () => {
+    removeSeedDataTable();
     seedData.classList.remove('inactive-class');
+    createTableSeedData();
   });
 };
 
@@ -21,4 +25,9 @@ const closeSeedData = () => {
       seedData.classList.add('inactive-class');
     }
   });
+};
+
+const removeSeedDataTable = () => {
+  const bodyTable = document.querySelector('.seed-data .table__body');
+  bodyTable.innerHTML = '';
 };

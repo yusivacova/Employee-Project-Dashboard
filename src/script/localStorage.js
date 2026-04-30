@@ -1,6 +1,7 @@
 import { MONTHLY_DATA } from './dataApp';
 import { createTableProjects } from './tableProject';
 import { createTableEmployees } from './tableEmployees';
+import { returnInitialTotalEstimatedIncome } from './tableProject';
 
 export function setLocalStorage() {
   localStorage.setItem('isUpdatePage', 'true');
@@ -26,13 +27,15 @@ export const updateTablesProjectsAndEmployees = () => {
   const keyObjData = `${periodYear}-${periodMonth}`;
 
   if (MONTHLY_DATA[keyObjData]) {
-    MONTHLY_DATA[keyObjData].projects.forEach(project => {
-      createTableProjects(project);
+    MONTHLY_DATA[keyObjData].projects.forEach((project, index) => {
+      createTableProjects(project, index);
     });
 
-    MONTHLY_DATA[keyObjData].employees.forEach(employee => {
-      createTableEmployees(employee);
+    MONTHLY_DATA[keyObjData].employees.forEach((employee, index) => {
+      createTableEmployees(employee, index);
     });
+  } else {
+    returnInitialTotalEstimatedIncome();
   }
 };
 

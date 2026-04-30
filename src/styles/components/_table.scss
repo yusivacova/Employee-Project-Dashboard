@@ -28,7 +28,8 @@
 }
 
 .table__btn-delete,
-.table__btn-assign {
+.table__btn-assign,
+.table__btn-seed {
   width: 70px;
   padding: 5px;
   border-radius: 5px;
@@ -54,6 +55,25 @@
   background-color: #9035ffa3;
 }
 
+.table__btn-seed {
+  background-color: $color-green;
+}
+
 .table__btn-assign {
   background-color: $color-blue-light;
+}
+
+.profit {
+  font-weight: 600;
+  color: $color-green;
+}
+
+.not-profit {
+  font-weight: 600;
+  color: $color-red-hover;
+}
+
+.main-content__total,
+.main-content__value {
+  @include font($size: 20px, $weight: 600);
 }

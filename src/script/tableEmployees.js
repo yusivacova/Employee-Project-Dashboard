@@ -1,13 +1,17 @@
-export function createTableEmployees(newEmployee) {
+import { updateTotalEstimatedIncome } from './tableProject';
+
+export function createTableEmployees(newEmployee, index) {
   const bodyTable = document.querySelector('.table-employee .table__body');
   const trEmployee = createTrEmployee(newEmployee);
+  trEmployee.dataset.index = index;
   bodyTable.append(trEmployee);
+
+  updateTotalEstimatedIncome();
 }
 
 const createTrEmployee = (employee) => {
   const newTr = document.createElement('tr');
   newTr.className = 'table__item';
-  console.log('employee', employee);
 
   createTDtable(newTr, employee['Name']);
   createTDtable(newTr, employee['Surname']);
@@ -15,9 +19,11 @@ const createTrEmployee = (employee) => {
   createTDtable(newTr, employee['Position']);
   createTDtable(newTr, `$${employee['Salary']}`);
   createEstimatedPayment(newTr, employee['Salary']);
-  createButtonShowAssignments(newTr);
-  createProjectedIncome(newTr);
+  createButtonShowAssignments(employee, newTr);
+  createProjectedIncome(employee, newTr);
   createButtonsActions(newTr);
+
+  updateTotalEstimatedIncome();
 
   return newTr;
 };
@@ -52,21 +58,30 @@ const createEstimatedPayment = (container, salary) => {
   return newTd;
 };
 
-const createButtonShowAssignments = (container) => {
-  const newTd = createTDtable(container);
-  const btnShowAssignments = document.createElement('button');
-  btnShowAssignments.className = 'table__btn-show-assignments';
-  btnShowAssignments.textContent = 'Show Assignments (0) 0.0/0.0';
-  newTd.append(btnShowAssignments);
-
-  return btnShowAssignments;
+const createButtonShowAssignments = (employee, container) => {
+  //нужно добавить в общий объект проекты которые назначены этому работнику
+  //и потом появится кнопка
+  if (employee.Projects) {
+    const newTd = createTDtable(container);
+    const btnShowAssignments = document.createElement('button');
+    btnShowAssignments.className = 'table__btn-show-assignments';
+    btnShowAssignments.textContent = 'Show Assignments (0) 0.0/0.0';
+    newTd.append(btnShowAssignments);
+  } else {
+    createTDtable(container, '-');
+  }
 };
 
-const createProjectedIncome = (container) => {
-  const valueProjectedIncome = 'sum of all assignment profits';
-  const newTd = createTDtable(container, valueProjectedIncome);
+const createProjectedIncome = (employee, container) => {
+  const newTd = document.createElement('td');
+  newTd.className = 'table__value';
+  newTd.classList.add('not-profit');
+  newTd.textContent = `$-${employee.Salary / 2}`;
 
-  return newTd;
+  if (employee['Project Income']) {
+    newTd.textContent = 'sum of all assignment profits';
+  }
+  container.append(newTd);
 };
 
 const createButtonsActions = (container) => {
