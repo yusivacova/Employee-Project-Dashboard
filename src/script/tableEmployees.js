@@ -1,5 +1,6 @@
 import { updateTotalEstimatedIncome } from './tableProject';
 import { deleteEmployee } from './deleteEmployee';
+import { getDayVacationEmployee } from './vacationEmployee';
 
 export function createTableEmployees(newEmployee, index) {
   const bodyTable = document.querySelector('.table-employee .table__body');
@@ -94,6 +95,11 @@ const createButtonsActions = (container) => {
   btnAvailability.className = 'table__btn-availability';
   btnAvailability.textContent = 'Availability';
   newTd.append(btnAvailability);
+
+  btnAvailability.addEventListener('click', (e) => {
+    const clickTag = e.target;
+    getDayVacationEmployee(clickTag);
+  });
 
   const btnAssign = document.createElement('button');
   btnAssign.className = 'table__btn-assign';

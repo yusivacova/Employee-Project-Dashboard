@@ -39,7 +39,7 @@ const createTDtable = (container, value) => {
   return newTd;
 };
 
-const getNameMonth = (num) => {
+export const getNameMonth = (num) => {
   const allMonth = document.querySelectorAll('.list-month__item');
   let result;
 
