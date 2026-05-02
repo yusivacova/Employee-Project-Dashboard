@@ -25,8 +25,6 @@ const createTrSeedData = (dataObject, data) => {
   createTDtable(newTr, dataObject.total);
   createButtonSeed(newTr);
 
-  console.log('dataObject', dataObject);
-
   return newTr;
 };
 
@@ -86,9 +84,4 @@ const seedEmployeeAndProject = (clickBtn) => {
 
   removeTablesProjectsAndEmployees();
   updateTablesProjectsAndEmployees();
-
-  console.log(MONTHLY_DATA);
-
-  console.log(clickBtn, 'clickBtn');
-  console.log('parent', parent);
 };

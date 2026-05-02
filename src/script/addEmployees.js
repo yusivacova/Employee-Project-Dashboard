@@ -88,6 +88,8 @@ const sendDataFromInServerEmployee = () => {
       newEmployee[item.firstElementChild.textContent.slice(0, -1)] = item.lastElementChild.value;
     });
 
+    newEmployee.vacation = [];
+
     const indexNewEmployee = updateMonthlyDataObjectEmployee(newEmployee, formEmployees);
 
     createTableEmployees(newEmployee, indexNewEmployee);
@@ -106,7 +108,7 @@ const updateMonthlyDataObjectEmployee = (newEmployee, form) => {
     MONTHLY_DATA[keyObjData].employees.push(newEmployee);
   }
 
-  const index = MONTHLY_DATA[keyObjData].projects.length - 1;
+  const index = MONTHLY_DATA[keyObjData].employees.length - 1;
 
   form.classList.remove('form-open');
   removeFormInputAndNotification();
