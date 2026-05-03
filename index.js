@@ -9135,7 +9135,7 @@ var getUrl_default = /*#__PURE__*/__webpack_require__.n(getUrl);
 var ___HTML_LOADER_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(6838), __webpack_require__.b);
 // Module
 var ___HTML_LOADER_REPLACEMENT_0___ = getUrl_default()(___HTML_LOADER_IMPORT_0___);
-var code = "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n        <meta name=\"viewport\" content=\"width=device-width\">\n        <link rel=\"icon\" href=\"#\" type=\"image/png\">\n        <title>Employee &amp; Project Dashboard</title>\n    </head>\n    <body>\n        <!-- linthtml-disable id-class-style -->\n        <div class=\"wrapper\">\n            <header class=\"header\">\n                <div class=\"header__sidebar-btn\">\n                    <p class=\"header__sidebar-btn-title\">Menu</p>\n                    <div class=\"header__sidebar-btn-img\">\n                        <img src=\"" + ___HTML_LOADER_REPLACEMENT_0___ + "\" alt=\"Arrow status open or close menu\" class=\"header__sidebar-btn-img-tag\">\n                    </div>\n                </div>\n                <h1 class=\"header__title\">Employee &amp; Project Dashboard</h1>\n            </header>\n            <main class=\"content\">\n                <section class=\"sidebar\">\n                    <div class=\"sidebar__content\">\n                        <h2 class=\"sidebar__title\">Period</h2>\n                        <select class=\"sidebar__list list-month\">\n                            <option value=\"0\" class=\"list-month__item\">January</option>\n                            <option value=\"01\" class=\"list-month__item\">February</option>\n                            <option value=\"02\" class=\"list-month__item\">March</option>\n                            <option value=\"03\" class=\"list-month__item\">April</option>\n                            <option value=\"04\" class=\"list-month__item\">May</option>\n                            <option value=\"05\" class=\"list-month__item\">June</option>\n                            <option value=\"06\" class=\"list-month__item\">July</option>\n                            <option value=\"07\" class=\"list-month__item\">August</option>\n                            <option value=\"08\" class=\"list-month__item\">September</option>\n                            <option value=\"09\" class=\"list-month__item\">October</option>\n                            <option value=\"10\" class=\"list-month__item\">November</option>\n                            <option value=\"11\" class=\"list-month__item\">December</option>\n                        </select>\n                        <select class=\"sidebar__list list-year\">\n                            <option value=\"2025\" class=\"list-year__item\">2025</option>\n                            <option value=\"2026\" class=\"list-year__item\">2026</option>\n                            <option value=\"2027\" class=\"list-year__item\">2027</option>\n                        </select>\n                        <div class=\"sidebar__modes\">\n                            <button type=\"button\" class=\"sidebar__modes-btn mode-active\">Projects</button>\n                            <button type=\"button\" class=\"sidebar__modes-btn\">Employees</button>\n                        </div>\n                    </div>\n                </section>\n                <section class=\"main-content\">\n                    <div class=\"main-content__body\">\n                        <div class=\"main-content__projects\">\n                            <div class=\"main-content__header\">\n                                <h2 class=\"main-content__title\">Projects</h2>\n                                <div class=\"main-content__btns\">\n                                    <button type=\"button\" class=\"main-content__btn-add btn-add-project\">Add project</button>\n                                    <button type=\"button\" class=\"main-content__btn-data btn-data-project\">Seed data</button>\n                                </div>\n                            </div>\n                            <table class=\"main-content__table table table-projects\">\n                                <thead class=\"table__header\">\n                                    <tr class=\"table__header-row\">\n                                        <th class=\"table__title\">Company name\n                                            <span class=\"table__title-sort\">&hArr;</span>\n                                            <span class=\"table__title-filter\">&#128269;</span>\n                                        </th>\n                                        <th class=\"table__title\">Project name\n                                            <span class=\"table__title-sort\">&hArr;</span>\n                                            <span class=\"table__title-filter\">&#128269;</span>\n                                        </th>\n                                        <th class=\"table__title\">Budget\n                                            <span class=\"table__title-sort\">&hArr;</span>\n                                        </th>\n                                        <th class=\"table__title\">Employee Capacity\n                                            <span class=\"table__title-sort\">&hArr;</span>\n                                        </th>\n                                        <th class=\"table__title\">Employees</th>\n                                        <th class=\"table__title\">Estimated Income\n                                            <span class=\"table__title-sort\">&hArr;</span>\n                                        </th>\n                                        <th class=\"table__title\">Actions</th>\n                                    </tr>\n                                </thead>\n                                <tbody class=\"table__body\">\n                                </tbody>\n                            </table>\n                            <div class=\"main-content__total\">\n                                Total Estimated Income:\n                                <span class=\"main-content__value profit\">$0.00</span>\n                            </div>\n                        </div>\n                        <div class=\"main-content__employees inactive-class\">\n                            <div class=\"main-content__header\">\n                                <h2 class=\"main-content__title\">Employees</h2>\n                                <div class=\"main-content__btns\">\n                                    <button type=\"button\" class=\"main-content__btn-add btn-add-employee\">Add Employee</button>\n                                </div>\n                            </div>\n                            <table class=\"main-content__table table table-employee\">\n                                <thead class=\"table__header\">\n                                    <tr class=\"table__header-row\">\n                                        <th class=\"table__title\">Name\n                                            <span class=\"table__title-sort\">&hArr;</span>\n                                            <span class=\"table__title-filter\">&#128269;</span>\n                                        </th>\n                                        <th class=\"table__title\">Surname\n                                            <span class=\"table__title-sort\">&hArr;</span>\n                                            <span class=\"table__title-filter\">&#128269;</span>\n                                        </th>\n                                        <th class=\"table__title\">Age\n                                            <span class=\"table__title-sort\">&hArr;</span>\n                                        </th>\n                                        <th class=\"table__title\">Position\n                                            <span class=\"table__title-filter\">&#128269;</span>\n                                        </th>\n                                        <th class=\"table__title\">Salary\n                                            <span class=\"table__title-sort\">&hArr;</span>\n                                        </th>\n                                        <th class=\"table__title\">Estimated Payment\n                                            <span class=\"table__title-sort\">&hArr;</span>\n                                        </th>\n                                        <th class=\"table__title\">Project\n                                            <span class=\"table__title-filter\">&#128269;</span>\n                                        </th>\n                                        <th class=\"table__title\">Project Income\n                                            <span class=\"table__title-sort\">&hArr;</span>\n                                        </th>\n                                        <th class=\"table__title\">Actions</th>\n                                    </tr>\n                                </thead>\n                                <tbody class=\"table__body\">\n                                </tbody>\n                            </table>\n                        </div>\n                        <div class=\"main-content__forms\">\n                            <div class=\"main-content__form form-projects\">\n                                <div class=\"main-content__form-body form\">\n                                    <h3 class=\"form__title form-title\">Add new Project</h3>\n                                    <form action=\"#\" method=\"post\" class=\"form__main\">\n                                        <div class=\"form__item\">\n                                            <label for=\"form-projects__name\">Project Name:</label>\n                                            <input type=\"text\" id=\"form-projects__name\">\n                                        </div>\n                                        <div class=\"form__item\">\n                                            <label for=\"form-projects__company\">Company Name:</label>\n                                            <input type=\"text\" id=\"form-projects__company\">\n                                        </div>\n                                        <div class=\"form__item\">\n                                            <label for=\"form-projects__budget\">Budget:</label>\n                                            <input type=\"number\" step=\"0.01\" min=\"0\" id=\"form-projects__budget\">\n                                        </div>\n                                        <div class=\"form__item\">\n                                            <label for=\"form-projects__employee\">Employee Capacity:</label>\n                                            <input type=\"number\" min=\"1\" required id=\"form-projects__employee\">\n                                        </div>\n                                        <div class=\"form__btns\">\n                                            <button type=\"submit\" class=\"form-projects__btn-add form-btn-add\" disabled>Add</button>\n                                            <button type=\"button\" class=\"form-projects__btn-cancel form-btn-cancel\">Cancel</button>\n                                        </div>\n                                    </form>\n                                </div>\n                            </div>\n                            <div class=\"main-content__form form-employees\">\n                                <div class=\"main-content__form-body form\">\n                                    <h3 class=\"form__title form-title\">Add new Employee</h3>\n                                    <form action=\"#\" method=\"post\" class=\"form__main\">\n                                        <div class=\"form__item\">\n                                            <label for=\"form__name\">Name:</label>\n                                            <input type=\"text\" id=\"form__name\">\n                                        </div>\n                                        <div class=\"form__item\">\n                                            <label for=\"form__surname\">Surname:</label>\n                                            <input type=\"text\" id=\"form__surname\">\n                                        </div>\n                                        <div class=\"form__item\">\n                                            <label for=\"form__birth\">Date of birth:</label>\n                                            <input type=\"date\" id=\"form__birth\">\n                                        </div>\n                                        <div class=\"form__item\">\n                                            <p>Position:</p>\n                                            <select name=\"position-employees\" id=\"form-employees__position\">\n                                                <option disabled>Select position</option>\n                                                <option value=\"Junior\">Junior</option>\n                                                <option value=\"Middle\">Middle</option>\n                                                <option value=\"Senior\">Senior</option>\n                                                <option value=\"Lead\">Lead</option>\n                                                <option value=\"Architect\">Architect</option>\n                                                <option value=\"BO\">BO</option>\n                                            </select>\n                                        </div>\n                                        <div class=\"form__item\">\n                                            <label for=\"form-employees__salary\">Salary:</label>\n                                            <input type=\"number\" step=\"0.01\" min=\"0\" id=\"form-employees__salary\">\n                                        </div>\n                                        <div class=\"form__btns\">\n                                            <button type=\"submit\" class=\"form-employees__btn-add form-btn-add\" disabled>Add</button>\n                                            <button type=\"button\" class=\"form-employees__btn-cancel form-btn-cancel\">Cancel</button>\n                                        </div>\n                                    </form>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"main-content__seed-data seed-data inactive-class\">\n                            <div class=\"seed-data__body\">\n                                <div class=\"seed-data__cross\">\n                                    <span class=\"seed-data__cross-item\"></span>\n                                    <span class=\"seed-data__cross-item\"></span>\n                                </div>\n                                <div class=\"seed-data__title\">Seed Data from Month</div>\n                                <p class=\"seed-data__text\"> Select a month to copy its data to the current month (<span class=\"seed-data__current-month\">April 2026</span>):</p>\n                                <table class=\"seed-data__table table\">\n                                    <thead class=\"table__header\">\n                                        <tr class=\"table__header-row\">\n                                            <th class=\"table__title\">Year</th>\n                                            <th class=\"table__title\">Month\n                                            </th>\n                                            <th class=\"table__title\">Projects</th>\n                                            <th class=\"table__title\">Employees</th>\n                                            <th class=\"table__title\">Total Est. Income</th>\n                                            <th class=\"table__title\">Action</th>\n                                        </tr>\n                                    </thead>\n                                    <tbody class=\"table__body\">\n                                    </tbody>\n                                </table>\n                            </div>\n                        </div>\n                    </div>\n                </section>\n            </main>\n        </div>\n    </body>\n</html>\n";
+var code = "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n        <meta name=\"viewport\" content=\"width=device-width\">\n        <link rel=\"icon\" href=\"#\" type=\"image/png\">\n        <title>Employee &amp; Project Dashboard</title>\n    </head>\n    <body>\n        <!-- linthtml-disable id-class-style -->\n        <div class=\"wrapper\">\n            <header class=\"header\">\n                <div class=\"header__sidebar-btn\">\n                    <p class=\"header__sidebar-btn-title\">Menu</p>\n                    <div class=\"header__sidebar-btn-img\">\n                        <img src=\"" + ___HTML_LOADER_REPLACEMENT_0___ + "\" alt=\"Arrow status open or close menu\" class=\"header__sidebar-btn-img-tag\">\n                    </div>\n                </div>\n                <h1 class=\"header__title\">Employee &amp; Project Dashboard</h1>\n            </header>\n            <main class=\"content\">\n                <section class=\"sidebar\">\n                    <div class=\"sidebar__content\">\n                        <h2 class=\"sidebar__title\">Period</h2>\n                        <select class=\"sidebar__list list-month\">\n                            <option value=\"0\" class=\"list-month__item\">January</option>\n                            <option value=\"01\" class=\"list-month__item\">February</option>\n                            <option value=\"02\" class=\"list-month__item\">March</option>\n                            <option value=\"03\" class=\"list-month__item\">April</option>\n                            <option value=\"04\" class=\"list-month__item\">May</option>\n                            <option value=\"05\" class=\"list-month__item\">June</option>\n                            <option value=\"06\" class=\"list-month__item\">July</option>\n                            <option value=\"07\" class=\"list-month__item\">August</option>\n                            <option value=\"08\" class=\"list-month__item\">September</option>\n                            <option value=\"09\" class=\"list-month__item\">October</option>\n                            <option value=\"10\" class=\"list-month__item\">November</option>\n                            <option value=\"11\" class=\"list-month__item\">December</option>\n                        </select>\n                        <select class=\"sidebar__list list-year\">\n                            <option value=\"2025\" class=\"list-year__item\">2025</option>\n                            <option value=\"2026\" class=\"list-year__item\">2026</option>\n                            <option value=\"2027\" class=\"list-year__item\">2027</option>\n                        </select>\n                        <div class=\"sidebar__modes\">\n                            <button type=\"button\" class=\"sidebar__modes-btn mode-active\">Projects</button>\n                            <button type=\"button\" class=\"sidebar__modes-btn\">Employees</button>\n                        </div>\n                    </div>\n                </section>\n                <section class=\"main-content\">\n                    <div class=\"main-content__body\">\n                        <div class=\"main-content__projects\">\n                            <div class=\"main-content__header\">\n                                <h2 class=\"main-content__title\">Projects</h2>\n                                <div class=\"main-content__btns\">\n                                    <button type=\"button\" class=\"main-content__btn-add btn-add-project\">Add project</button>\n                                    <button type=\"button\" class=\"main-content__btn-data btn-data-project\">Seed data</button>\n                                </div>\n                            </div>\n                            <table class=\"main-content__table table table-projects\">\n                                <thead class=\"table__header\">\n                                    <tr class=\"table__header-row\">\n                                        <th class=\"table__title\">Company name\n                                            <span class=\"table__title-sort\">&hArr;</span>\n                                            <span class=\"table__title-filter\">&#128269;</span>\n                                        </th>\n                                        <th class=\"table__title\">Project name\n                                            <span class=\"table__title-sort\">&hArr;</span>\n                                            <span class=\"table__title-filter\">&#128269;</span>\n                                        </th>\n                                        <th class=\"table__title\">Budget\n                                            <span class=\"table__title-sort\">&hArr;</span>\n                                        </th>\n                                        <th class=\"table__title\">Employee Capacity\n                                            <span class=\"table__title-sort\">&hArr;</span>\n                                        </th>\n                                        <th class=\"table__title\">Employees</th>\n                                        <th class=\"table__title\">Estimated Income\n                                            <span class=\"table__title-sort\">&hArr;</span>\n                                        </th>\n                                        <th class=\"table__title\">Actions</th>\n                                    </tr>\n                                </thead>\n                                <tbody class=\"table__body\">\n                                </tbody>\n                            </table>\n                            <div class=\"main-content__total\">\n                                Total Estimated Income:\n                                <span class=\"main-content__value profit\">$0.00</span>\n                            </div>\n                        </div>\n                        <div class=\"main-content__employees inactive-class\">\n                            <div class=\"main-content__header\">\n                                <h2 class=\"main-content__title\">Employees</h2>\n                                <div class=\"main-content__btns\">\n                                    <button type=\"button\" class=\"main-content__btn-add btn-add-employee\">Add Employee</button>\n                                </div>\n                            </div>\n                            <table class=\"main-content__table table table-employee\">\n                                <thead class=\"table__header\">\n                                    <tr class=\"table__header-row\">\n                                        <th class=\"table__title\">Name\n                                            <span class=\"table__title-sort\">&hArr;</span>\n                                            <span class=\"table__title-filter\">&#128269;</span>\n                                        </th>\n                                        <th class=\"table__title\">Surname\n                                            <span class=\"table__title-sort\">&hArr;</span>\n                                            <span class=\"table__title-filter\">&#128269;</span>\n                                        </th>\n                                        <th class=\"table__title\">Age\n                                            <span class=\"table__title-sort\">&hArr;</span>\n                                        </th>\n                                        <th class=\"table__title\">Position\n                                            <span class=\"table__title-filter\">&#128269;</span>\n                                        </th>\n                                        <th class=\"table__title\">Salary\n                                            <span class=\"table__title-sort\">&hArr;</span>\n                                        </th>\n                                        <th class=\"table__title\">Estimated Payment\n                                            <span class=\"table__title-sort\">&hArr;</span>\n                                        </th>\n                                        <th class=\"table__title\">Project\n                                            <span class=\"table__title-filter\">&#128269;</span>\n                                        </th>\n                                        <th class=\"table__title\">Project Income\n                                            <span class=\"table__title-sort\">&hArr;</span>\n                                        </th>\n                                        <th class=\"table__title\">Actions</th>\n                                    </tr>\n                                </thead>\n                                <tbody class=\"table__body\">\n                                </tbody>\n                            </table>\n                        </div>\n                        <div class=\"main-content__forms\">\n                            <div class=\"main-content__form form-projects\">\n                                <div class=\"main-content__form-body form\">\n                                    <h3 class=\"form__title form-title\">Add new Project</h3>\n                                    <form action=\"#\" method=\"post\" class=\"form__main\">\n                                        <div class=\"form__item\">\n                                            <label for=\"form-projects__name\">Project Name:</label>\n                                            <input type=\"text\" id=\"form-projects__name\">\n                                        </div>\n                                        <div class=\"form__item\">\n                                            <label for=\"form-projects__company\">Company Name:</label>\n                                            <input type=\"text\" id=\"form-projects__company\">\n                                        </div>\n                                        <div class=\"form__item\">\n                                            <label for=\"form-projects__budget\">Budget:</label>\n                                            <input type=\"number\" step=\"0.01\" min=\"0\" id=\"form-projects__budget\">\n                                        </div>\n                                        <div class=\"form__item\">\n                                            <label for=\"form-projects__employee\">Employee Capacity:</label>\n                                            <input type=\"number\" min=\"1\" required id=\"form-projects__employee\">\n                                        </div>\n                                        <div class=\"form__btns\">\n                                            <button type=\"submit\" class=\"form-projects__btn-add form-btn-add\" disabled>Add</button>\n                                            <button type=\"button\" class=\"form-projects__btn-cancel form-btn-cancel\">Cancel</button>\n                                        </div>\n                                    </form>\n                                </div>\n                            </div>\n                            <div class=\"main-content__form form-employees\">\n                                <div class=\"main-content__form-body form\">\n                                    <h3 class=\"form__title form-title\">Add new Employee</h3>\n                                    <form action=\"#\" method=\"post\" class=\"form__main\">\n                                        <div class=\"form__item\">\n                                            <label for=\"form__name\">Name:</label>\n                                            <input type=\"text\" id=\"form__name\">\n                                        </div>\n                                        <div class=\"form__item\">\n                                            <label for=\"form__surname\">Surname:</label>\n                                            <input type=\"text\" id=\"form__surname\">\n                                        </div>\n                                        <div class=\"form__item\">\n                                            <label for=\"form__birth\">Date of birth:</label>\n                                            <input type=\"date\" id=\"form__birth\">\n                                        </div>\n                                        <div class=\"form__item\">\n                                            <p>Position:</p>\n                                            <select name=\"position-employees\" id=\"form-employees__position\">\n                                                <option disabled>Select position</option>\n                                                <option value=\"Junior\">Junior</option>\n                                                <option value=\"Middle\">Middle</option>\n                                                <option value=\"Senior\">Senior</option>\n                                                <option value=\"Lead\">Lead</option>\n                                                <option value=\"Architect\">Architect</option>\n                                                <option value=\"BO\">BO</option>\n                                            </select>\n                                        </div>\n                                        <div class=\"form__item\">\n                                            <label for=\"form-employees__salary\">Salary:</label>\n                                            <input type=\"number\" step=\"0.01\" min=\"0\" id=\"form-employees__salary\">\n                                        </div>\n                                        <div class=\"form__btns\">\n                                            <button type=\"submit\" class=\"form-employees__btn-add form-btn-add\" disabled>Add</button>\n                                            <button type=\"button\" class=\"form-employees__btn-cancel form-btn-cancel\">Cancel</button>\n                                        </div>\n                                    </form>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"main-content__seed-data seed-data inactive-class\">\n                            <div class=\"seed-data__body\">\n                                <div class=\"seed-data__cross\">\n                                    <span class=\"seed-data__cross-item\"></span>\n                                    <span class=\"seed-data__cross-item\"></span>\n                                </div>\n                                <div class=\"seed-data__title\">Seed Data from Month</div>\n                                <p class=\"seed-data__text\"> Select a month to copy its data to the current month (<span class=\"seed-data__current-month\">April 2026</span>):</p>\n                                <table class=\"seed-data__table table\">\n                                    <thead class=\"table__header\">\n                                        <tr class=\"table__header-row\">\n                                            <th class=\"table__title\">Year</th>\n                                            <th class=\"table__title\">Month\n                                            </th>\n                                            <th class=\"table__title\">Projects</th>\n                                            <th class=\"table__title\">Employees</th>\n                                            <th class=\"table__title\">Total Est. Income</th>\n                                            <th class=\"table__title\">Action</th>\n                                        </tr>\n                                    </thead>\n                                    <tbody class=\"table__body\">\n                                    </tbody>\n                                </table>\n                            </div>\n                        </div>\n                        <div class=\"calendar inactive-class\"></div>\n                    </div>\n                </section>\n            </main>\n        </div>\n    </body>\n</html>\n";
 // Exports
 /* harmony default export */ const src = ((/* unused pure expression or super */ null && (code)));
 ;// ./src/script/menu.js
@@ -9413,7 +9413,6 @@ const createTrSeedData = (dataObject, data) => {
   createTDtable(newTr, dataObject.employees.length);
   createTDtable(newTr, dataObject.total);
   createButtonSeed(newTr);
-  console.log('dataObject', dataObject);
   return newTr;
 };
 const createTDtable = (container, value) => {
@@ -9464,9 +9463,6 @@ const seedEmployeeAndProject = clickBtn => {
   });
   removeTablesProjectsAndEmployees();
   updateTablesProjectsAndEmployees();
-  console.log(MONTHLY_DATA);
-  console.log(clickBtn, 'clickBtn');
-  console.log('parent', parent);
 };
 ;// ./src/script/vacationEmployee.js
 
@@ -9474,9 +9470,9 @@ const seedEmployeeAndProject = clickBtn => {
 const getDayVacationEmployee = clickBtn => {
   const parent = clickBtn.closest('.table__item');
   const indexEmployee = parent.getAttribute('data-index');
-  const keyObjData = defineDateKey();
-  createCalendar(parent);
-  console.log('clickBtn', parent);
+  createCalendar(parent, indexEmployee);
+  closeTableVacationEmployee();
+  createDatesVacationForTitle();
 };
 const createHtmlElement = (tag, className, parent, value) => {
   const newTag = document.createElement(tag);
@@ -9485,13 +9481,12 @@ const createHtmlElement = (tag, className, parent, value) => {
   if (value) newTag.textContent = value;
   return newTag;
 };
-const createCalendar = employeeHtml => {
-  const container = document.querySelector('.main-content__body');
-  const calendar = createHtmlElement('div', 'calendar', container);
+const createCalendar = (employeeHtml, indexEmployee) => {
+  const calendar = document.querySelector('.calendar');
+  calendar.classList.remove('inactive-class');
   const calendarBody = createHtmlElement('div', 'calendar__body', calendar);
   const nameEmployee = employeeHtml.children[0].textContent;
   const surnameEmployee = employeeHtml.children[1].textContent;
-  console.log('employeeHtml', employeeHtml);
   const crossCalendar = createHtmlElement('div', 'calendar__cross', calendarBody);
   createHtmlElement('span', 'calendar__cross-item', crossCalendar);
   createHtmlElement('span', 'calendar__cross-item', crossCalendar);
@@ -9501,7 +9496,8 @@ const createCalendar = employeeHtml => {
   const year = document.querySelector('.list-year').value;
   createHtmlElement('p', 'calendar__subtitle', calendarBody, `${month} ${year}`);
   const workday = createCalendarContainer(calendarBody, monthNum, year);
-  createWorkDaysEmployee(workday);
+  createWorkDaysEmployee(calendarBody, workday, indexEmployee);
+  currentSelectedVactionDays(calendarBody, indexEmployee);
   return calendar;
 };
 const createCalendarContainer = (calendarBody, month, year) => {
@@ -9524,7 +9520,7 @@ const createCalendarContainer = (calendarBody, month, year) => {
     dayNum.textContent = i;
     dayNum.className = 'calendar__day-num';
     let dayOfWeek = new Date(year, month, i).getDay();
-    dayOfWeek = dayOfWeek - 1;
+    dayOfWeek -= 1;
     if (dayOfWeek < 0) dayOfWeek = 0;
     if (dayOfWeek === 0 || dayOfWeek === 6) {
       dayNum.classList.add('weekend-day');
@@ -9536,10 +9532,316 @@ const createCalendarContainer = (calendarBody, month, year) => {
   }
   return workday;
 };
-const createWorkDaysEmployee = workday => {
-  // у нас есть значение рабочих дней в месяце
+const createWorkDaysEmployee = (container, workday, indexEmployee) => {
+  addSelectedVacationDaysIsWereChosen(indexEmployee);
+  const tagCountWorkDay = createHtmlElement('p', 'calendar__count-workday', container);
+  createHtmlElement('span', 'calendar__text-count-workday', tagCountWorkDay, 'Working Days:');
+  let countWorkDay = createCalendarWorkdayValue(tagCountWorkDay, workday);
+  const calendarWorkdayValue = document.querySelector('.calendar__count-workday-value');
+  const calendar = document.querySelector('.calendar__body');
+  calendar.addEventListener('click', e => {
+    const clickTag = e.target;
+    const keyObjData = defineDateKey();
+    const dayVacation = clickTag.textContent;
+    const datesSelectedVacationArr = [];
+    if (clickTag.classList.contains('calendar__day-num') && clickTag.classList.contains('day-num-selected')) {
+      const indexDay = datesSelectedVacationArr.indexOf(dayVacation);
+      datesSelectedVacationArr.splice(indexDay, 1);
+      clickTag.classList.remove('day-num-selected');
+      countWorkDay += 1;
+    } else if (clickTag.classList.contains('calendar__day-num') && !clickTag.classList.contains('day-num-selected')) {
+      clickTag.classList.add('day-num-selected');
+      datesSelectedVacationArr.push(dayVacation);
+      countWorkDay -= 1;
+    }
+    createDatesVacationForTitle();
+    calendarWorkdayValue.textContent = `${countWorkDay} / ${workday}`;
+    sendDataObdVacationsEmployee(indexEmployee);
+  });
+};
+const createCalendarWorkdayValue = (container, workday) => {
+  const tagVacationsDays = document.querySelectorAll('.day-num-selected');
+  const countWorkDay = workday - tagVacationsDays.length;
+  const calendarWorkdayValue = createHtmlElement('span', 'calendar__count-workday-value', container, `${countWorkDay} / ${workday}`);
+  return countWorkDay;
+};
+const currentSelectedVactionDays = container => {
+  const tagCurrentSelectedVacationDays = createHtmlElement('div', 'calendar__current-vacation', container);
+  createHtmlElement('p', 'calendar__title-vacation', tagCurrentSelectedVacationDays, 'Vacation Days:');
+  createHtmlElement('span', 'calendar__dates-vacation', tagCurrentSelectedVacationDays);
+  createHtmlElement('button', 'calendar__set-vacation-btn', tagCurrentSelectedVacationDays, 'Set vacation');
+};
+const createDatesVacationForTitle = () => {
+  const keyObjData = defineDateKey();
+  const datesVacation = document.querySelector('.calendar__dates-vacation');
+  datesVacation.textContent = [];
+  const arrKeyObjData = keyObjData.split('-');
+  const monthNum = +arrKeyObjData[1] + 1;
+  let monthStr = String(monthNum);
+  if (monthStr.length !== 2) monthStr = `0${monthStr}`;
+  const arrDaysVacationElements = [...document.querySelectorAll('.day-num-selected')];
+  const arrDays = arrDaysVacationElements.reduce((acc, item) => {
+    acc.push(item.textContent);
+    return acc;
+  }, []);
+  arrDays.forEach((dayVacation, index) => {
+    const dayVacationWithMonth = dayVacation.length === 2 ? `${dayVacation}.${monthStr}` : `0${dayVacation}.${monthStr}`;
+    if (index === 0) datesVacation.textContent += `${dayVacationWithMonth}`;
+    if (index >= 1) {
+      datesVacation.textContent += `, ${dayVacationWithMonth}`;
+    }
+  });
+};
+const sendDataObdVacationsEmployee = indexEmployee => {
+  const btrSetVacation = document.querySelector('.calendar__set-vacation-btn');
+  btrSetVacation.addEventListener('click', e => {
+    const keyObjData = defineDateKey();
+    MONTHLY_DATA[keyObjData].employees[indexEmployee].vacation = [];
+    const calendarCountWorkdayValue = document.querySelector('.calendar__count-workday-value');
+    const arrCalendarCountWorkdayValue = calendarCountWorkdayValue.textContent.split('/');
+    const workDays = arrCalendarCountWorkdayValue[1];
+    let countVacationDaysForCoefficient = 0;
+    const datesSelectedVacation = document.querySelectorAll('.day-num-selected');
+    datesSelectedVacation.forEach(item => {
+      MONTHLY_DATA[keyObjData].employees[indexEmployee].vacation.push(item.textContent);
+      if (!item.classList.contains('weekend-day')) countVacationDaysForCoefficient += 1;
+    });
+    const vacationCoefficient = (workDays - countVacationDaysForCoefficient) / workDays;
+    MONTHLY_DATA[keyObjData].employees[indexEmployee]['Vacation coefficient'] = vacationCoefficient.toFixed(2);
+  });
+};
+const closeTableVacationEmployee = () => {
+  const calendar = document.querySelector('.calendar');
+  calendar.addEventListener('click', e => {
+    const clickTag = e.target;
+    if (clickTag.className.includes('calendar__cross') || clickTag.className.includes('calendar__set-vacation-btn')) {
+      calendar.classList.add('inactive-class');
+      calendar.innerHTML = '';
+    }
+  });
+};
+const addSelectedVacationDaysIsWereChosen = indexEmployee => {
+  const keyObjData = defineDateKey();
+  const allDaysMonth = document.querySelectorAll('.calendar__day-num');
+  if (MONTHLY_DATA[keyObjData].employees[indexEmployee].vacation.length) {
+    allDaysMonth.forEach(item => {
+      if (MONTHLY_DATA[keyObjData].employees[indexEmployee].vacation.includes(item.textContent)) {
+        item.classList.add('day-num-selected');
+      }
+    });
+  }
+};
+;// ./src/script/assignEmployee.js
+
+
+function assignEmployee(clickBtn) {
+  const parent = clickBtn.closest('.table__item');
+  const indexEmployee = parent.getAttribute('data-index');
+  createWindowAssignEmployee(indexEmployee, parent);
+  closeWindowAssignEmployee();
+  monitorSelectProjectForEmployee();
+}
+const createWindowAssignEmployee = (indexEmployee, container) => {
+  const assignElement = createHtmlElement('div', 'assign', container);
+  assignElement.dataset.index = indexEmployee;
+  const assignWindow = createHtmlElement('div', 'assign__body', assignElement);
+  createTitleWindowAssignEmployee(indexEmployee, assignWindow);
+  createInformationPart(assignWindow);
+  createSelectProject(assignWindow);
+  createBodyOptionsForAssign(assignWindow);
+  createButtonsAssign(assignWindow);
+};
+const createTitleWindowAssignEmployee = (indexEmployee, container) => {
+  const keyObjData = defineDateKey();
+  const nameEmployee = MONTHLY_DATA[keyObjData].employees[indexEmployee].Name;
+  const surnameEmployee = MONTHLY_DATA[keyObjData].employees[indexEmployee].Surname;
+  createHtmlElement('p', 'assign__title', container, `Assign - ${nameEmployee} ${surnameEmployee}`);
+  console.log('MONTHLY_DATA[keyObjData].employees[indexEmployee]', MONTHLY_DATA[keyObjData].employees[indexEmployee]);
+};
+const createInformationPart = assignWindow => {
+  const currentCapacity = createHtmlElement('div', 'assign__current-capacity', assignWindow);
+  createHtmlElement('span', 'assign__current-capacity-title', currentCapacity, 'Current Capacity:');
+  createHtmlElement('span', 'assign__current-capacity-selected', currentCapacity, '0.0 ');
+  createHtmlElement('span', 'assign__current-capacity-max', currentCapacity, '/  1.5');
+  const assignAvailable = createHtmlElement('div', 'assign__available', assignWindow);
+  createHtmlElement('span', 'assign__available-title', assignAvailable, 'Available: ');
+  createHtmlElement('span', 'assign__available-value', assignAvailable, '1.5');
+};
+const createSelectProject = assignWindow => {
+  const selectProject = createHtmlElement('div', 'assign__select-project', assignWindow);
+  createHtmlElement('p', 'assign__select-project-title', selectProject, 'Select Project:');
+  const listProject = createHtmlElement('select', 'assign__select-project-list', selectProject);
+  const keyObjData = defineDateKey();
+  const currentProjects = MONTHLY_DATA[keyObjData].projects;
+  const firstOption = createHtmlElement('option', 'assign__select-project-option', listProject, 'Select a project for an employee');
+  firstOption.setAttribute('disabled', 'true');
+  currentProjects.forEach((project, index) => {
+    const employeeCapacity = `${project['Employee Capacity']}.0`;
+    const titleOption = `${project['Project Name']} (${project['Company Name']}) - Available: ${employeeCapacity}`;
+    const optionList = createHtmlElement('option', 'assign__select-project-option', listProject, titleOption);
+    optionList.value = index;
+  });
+};
+const createBodyOptionsForAssign = assignWindow => {
+  createHtmlElement('div', 'assign__options', assignWindow);
+};
+const createButtonsAssign = assignWindow => {
+  const buttons = createHtmlElement('div', 'assign__buttons', assignWindow);
+  const btnAssign = createHtmlElement('button', 'assign__btn-assign', buttons, 'Assign');
+  btnAssign.setAttribute('disabled', 'true');
+  createHtmlElement('button', 'assign__btn-cancel', buttons, 'Cancel');
+};
+const closeWindowAssignEmployee = () => {
+  const assign = document.querySelector('.assign');
+  assign.addEventListener('click', e => {
+    const clickTag = e.target;
+    if (clickTag.classList.contains('assign__btn-cancel')) {
+      assign.remove();
+    }
+  });
+};
+const monitorSelectProjectForEmployee = () => {
+  const listProjects = document.querySelector('.assign__select-project-list');
+  listProjects.addEventListener('change', e => {
+    const clickTag = e.target;
+    if (listProjects.value) {
+      createOptionsForAssign(clickTag.value);
+      const btnAssign = document.querySelector('.assign__btn-assign');
+      btnAssign.disabled = false;
+      monitorChangeResizableInputAllocation(clickTag.value);
+      monitorChangeResizableInputProjectFit(clickTag.value);
+    }
+  });
+};
+const createOptionsForAssign = indexProject => {
+  const assignOptions = document.querySelector('.assign__options');
+  assignOptions.innerHTML = '';
+  const capacityAllocation = createHtmlElement('div', 'assign__capacity-allocation', assignOptions);
+  createHtmlElement('span', 'assign__capacity-allocation-title', capacityAllocation, 'Capacity Allocation: ');
+  createHtmlElement('span', 'assign__capacity-allocation-title-value', capacityAllocation, '1.0');
+  resizableInputCapacityAllocation(capacityAllocation);
+  createHtmlElement('p', 'assign__capacity-allocation-text', capacityAllocation, 'Adjust capacity (0.0 - 1.5)');
+  const projectFit = createHtmlElement('div', 'assign__project-fit', assignOptions);
+  createHtmlElement('span', 'assign__project-fit-title', projectFit, 'Project Fit: ');
+  createHtmlElement('span', 'assign__project-fit-title-value', projectFit, '1.0');
+  resizableInputpProjectFit(projectFit);
+  createHtmlElement('p', 'assign__project-fit-text', projectFit, 'Project fit coefficient (0.0-1.0). Effective capacity = capacity × fit)');
+  createBottomOptions(assignOptions, indexProject);
+};
+const resizableInputCapacityAllocation = container => {
+  const capacityAllocationValue = createHtmlElement('div', 'assign__capacity-allocation-value', container);
+  const inputCapacityAllocation = createHtmlElement('input', 'assign__resizable-input-allocation', capacityAllocationValue);
+  inputCapacityAllocation.type = 'range';
+  inputCapacityAllocation.min = 0;
+  inputCapacityAllocation.max = 1.5;
+  inputCapacityAllocation.step = 0.1;
+  inputCapacityAllocation.value = 1;
+};
+const resizableInputpProjectFit = container => {
+  const projectFitValue = createHtmlElement('div', 'assign__project-fit-value', container);
+  const inputProjectFit = createHtmlElement('input', 'assign__resizable-input-project-fit', projectFitValue);
+  inputProjectFit.type = 'range';
+  inputProjectFit.min = 0;
+  inputProjectFit.max = 1;
+  inputProjectFit.step = 0.1;
+  inputProjectFit.value = 1;
+};
+const createBottomOptions = (container, indexProject) => {
+  const keyObjData = defineDateKey();
+  const bodyBottom = createHtmlElement('div', 'assign__bottom', container);
+  const projectCapacity = createHtmlElement('div', 'assign__project-capacity', bodyBottom);
+  createHtmlElement('span', 'assign__project-capacity-title', projectCapacity, 'Project Capacity:');
+  const containerValueProjectCapacity = createHtmlElement('span', 'assign__project-capacity-container', projectCapacity);
+  createHtmlElement('span', 'assign__project-capacity-value-selected', containerValueProjectCapacity, '0.0');
+  const maxProjectCapacity = MONTHLY_DATA[keyObjData].projects[indexProject]['Employee Capacity'];
+  createHtmlElement('span', 'assign__project-capacity-value-max', containerValueProjectCapacity, ` / ${maxProjectCapacity}`);
+  const effectiveCapacity = createHtmlElement('div', 'assign__effective-capacity', bodyBottom);
+  createHtmlElement('span', 'assign__effective-capacity-title', effectiveCapacity, 'Effective Capacity:');
+  createHtmlElement('span', 'assign__effective-capacity-text', effectiveCapacity, '1.0');
+  const afterAssignment = createHtmlElement('div', 'assign__after-assignment', bodyBottom);
+  createHtmlElement('span', 'assign__after-assignment-title', afterAssignment, 'After Assignment:');
+  const containerValueAfterAssignment = createHtmlElement('span', 'assign__after-assignment-container', afterAssignment);
+  createHtmlElement('span', 'assign__after-assignment-value-selected', containerValueAfterAssignment, '1.0');
+  createHtmlElement('span', 'assign__after-assignment-max', containerValueAfterAssignment, `/ ${maxProjectCapacity}`);
+};
+const monitorChangeResizableInputAllocation = indexProject => {
+  const resizableInputAllocation = document.querySelector('.assign__resizable-input-allocation');
+  resizableInputAllocation.addEventListener('input', e => {
+    const {
+      value
+    } = e.target;
+    const capacityAllocationTitleValue = document.querySelector('.assign__capacity-allocation-title-value');
+    capacityAllocationTitleValue.textContent = value;
+    errorInputAllocation(value);
+    setChangeEffectiveCapacity();
+  });
+};
+const setChangeEffectiveCapacity = () => {
+  const capacityAllocation = document.querySelector('.assign__capacity-allocation-title-value').textContent;
+  const projectFit = document.querySelector('.assign__project-fit-title-value').textContent;
+  const effectiveCapacity = document.querySelector('.assign__effective-capacity-text');
+  let valueEffectiveCapacity = 0;
+  valueEffectiveCapacity = capacityAllocation * projectFit;
+  effectiveCapacity.textContent = valueEffectiveCapacity.toFixed(2);
+
+  //Установить значение после изменения -- нет формулы
+  const afterAssignmentValueSelected = document.querySelector('.assign__after-assignment-value-selected');
+  afterAssignmentValueSelected.textContent = valueEffectiveCapacity.toFixed(2);
+};
+const monitorChangeResizableInputProjectFit = indexProject => {
+  const resizableInputProjectFit = document.querySelector('.assign__resizable-input-project-fit');
+  resizableInputProjectFit.addEventListener('input', e => {
+    const {
+      value
+    } = e.target;
+    const projectFitTitleValue = document.querySelector('.assign__project-fit-title-value');
+    projectFitTitleValue.textContent = value;
+    setChangeEffectiveCapacity();
+  });
+};
+
+//vacaton coefficient
+/*
+ const assign = document.querySelector('.assign');
+  const indexEmployee = assign.dataset.index;
+  const keyObjData = defineDateKey();
+  const vacationCoefficient = MONTHLY_DATA[keyObjData].employees[indexEmployee]['Vacation coefficient'];
+  const effectiveCapacity = document.querySelector('.assign__effective-capacity-text');
+  let valueEffectiveCapacity = 0;
+
+  console.log('MONTHLY_DATA[keyObjData].employees[indexEmployee]', MONTHLY_DATA[keyObjData].employees[indexEmployee])
+  console.log('vacationCoefficient ', vacationCoefficient)
+
+  if (vacationCoefficient) {
+    valueEffectiveCapacity = capacityAllocation * projectFit * vacationCoefficient;
+  } else {
+    valueEffectiveCapacity = capacityAllocation * projectFit;
+  }
+*/
+
+const errorInputAllocation = value => {
+  const btnAssign = document.querySelector('.assign__btn-assign');
+  const elementButtons = document.querySelector('.assign__buttons');
+  const errorText = document.querySelector('.assign__allocation-error');
+  const numValue = +value;
+  //assign__allocation-error
+
+  console.log('value', value);
+  console.log('value', typeof value);
+  if (!numValue) {
+    btnAssign.setAttribute('disabled', 'true');
+    const errorText = document.createElement('div');
+    errorText.className = 'assign__allocation-error';
+    errorText.textContent = 'Please enter a valid capacity';
+    elementButtons.before(errorText);
+  }
+  if (numValue && errorText) {
+    btnAssign.disabled = false;
+    errorText.remove();
+  }
 };
 ;// ./src/script/tableEmployees.js
+
 
 
 
@@ -9625,6 +9927,10 @@ const createButtonsActions = container => {
   btnAssign.className = 'table__btn-assign';
   btnAssign.textContent = 'Assign';
   newTd.append(btnAssign);
+  btnAssign.addEventListener('click', e => {
+    const clickTag = e.target;
+    assignEmployee(clickTag);
+  });
   const btnDelete = document.createElement('button');
   btnDelete.className = 'table__btn-delete';
   btnDelete.textContent = 'Delete';
@@ -9976,6 +10282,7 @@ const sendDataFromInServerEmployee = () => {
     allItemsForm.forEach(item => {
       newEmployee[item.firstElementChild.textContent.slice(0, -1)] = item.lastElementChild.value;
     });
+    newEmployee.vacation = [];
     const indexNewEmployee = updateMonthlyDataObjectEmployee(newEmployee, formEmployees);
     createTableEmployees(newEmployee, indexNewEmployee);
   });
@@ -9993,7 +10300,7 @@ const updateMonthlyDataObjectEmployee = (newEmployee, form) => {
     };
     MONTHLY_DATA[keyObjData].employees.push(newEmployee);
   }
-  const index = MONTHLY_DATA[keyObjData].projects.length - 1;
+  const index = MONTHLY_DATA[keyObjData].employees.length - 1;
   form.classList.remove('form-open');
   addEmployees_removeFormInputAndNotification();
   return index;
