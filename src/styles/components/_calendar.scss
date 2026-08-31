@@ -1,0 +1,139 @@
+.calendar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  @include flex($justify: center);
+  background-color: $color-modal;
+}
+
+.calendar__cross {
+  @include flex($justify: center);
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+}
+
+.calendar__cross-item {
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 2px;
+  background-color: $color-black;
+  border-radius: 1px;
+
+  &:first-child {
+    margin: -1px 0;
+    transform: rotate(45deg);
+  }
+
+  &:last-child {
+    margin: 0;
+    transform: rotate(-45deg);
+  }
+}
+
+.calendar__body {
+  position: relative;
+  flex: 0 1 60%;
+  @include flex($direction: column, $align: center, $justify: center);
+  padding: 25px;
+  background-color: $color-white;
+}
+
+.calendar__title {
+  @include font($size: 22px, $weight: 600);
+  margin: 0 0 15px;
+}
+
+.calendar__subtitle {
+  @include font($size: 18px, $weight: 400);
+  margin: 0 0 15px;
+}
+
+.calendar__day-weeks {
+  width: 350px;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: bold;
+}
+
+.calendar__day-nums {
+  width: 350px;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(7, 1fr);
+  margin: 0 0 30px;
+  text-align: center;
+}
+
+.calendar__day-num {
+  border: 1px solid $color-black;
+  padding: 5px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $color-btn-hover;
+  }
+}
+
+.weekend-day {
+  background-color: #fff01a90;
+  color: rgb(78, 78, 78);
+}
+
+.workday-day {
+}
+
+.calendar__work-day {
+  @include font($size: 22px, $weight: 600);
+}
+
+.calendar__count-workday {
+  margin: 0 0 10px;
+  @include font($size: 18px, $weight: 600);
+}
+
+.calendar__text-count-workday {
+  padding: 0 10px 0 0;
+}
+
+.day-num-selected {
+  background-color: $color-btn-hover;
+}
+
+.calendar__count-workday-value {
+}
+
+.calendar__current-vacation {
+  @include flex($justify: center);
+}
+
+.calendar__title-vacation {
+  @include font($size: 18px, $weight: 600);
+  color: $color-green;
+}
+
+.calendar__dates-vacation {
+  width: 320px;
+  padding: 15px;
+}
+
+.calendar__set-vacation-btn {
+  width: 118px;
+  padding: 5px;
+  border-radius: 5px;
+  @include font($size: 18px);
+  background-color: $color-green;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $color-blue-light-hover;
+  }
+}

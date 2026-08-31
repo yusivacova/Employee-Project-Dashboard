@@ -1,0 +1,39 @@
+.header {
+  @include flex($justify: center);
+  padding: 25px 15px;
+  background-color: $color-light;
+}
+
+.header__sidebar-btn {
+  width: 270px;
+  @include flex;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 1px solid $color-blue-light;
+  transition: all 0.3s ease;
+}
+
+.header__sidebar-btn:hover {
+  background: $color-blue-light-hover;
+}
+
+.header__sidebar-btn-title {
+  @include font($size: 20px, $weight: 600);
+  text-transform: uppercase;
+}
+
+.header__sidebar-btn-img {
+  width: 40px;
+  height: 40px;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.header__title {
+  flex: 1 1 auto;
+  text-align: center;
+  @include font($size: 24px);
+}
